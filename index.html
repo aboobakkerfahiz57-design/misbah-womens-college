@@ -5,2050 +5,3161 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Misbah Women's College | Mangaluru</title>
-
-<meta name="description" content="Misbah Women's College, Katipalla, Mangaluru — Empowering Women. Inspiring Futures.">
-<meta name="keywords" content="Misbah Women's College, Mangaluru, Katipalla, Women's College, Admissions, B.Com, BCA, PUC">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<meta name="description" content="Misbah Women's College, Mangaluru — Empowering women through quality education, technology and opportunity.">
 
 <style>
-
 /* =========================================================
-MISBAH WOMEN'S COLLEGE
-PREMIUM WEBSITE DEMO
-========================================================= */
+   MISBAH WOMEN'S COLLEGE
+   COMPLETE SINGLE-FILE WEBSITE
+   ========================================================= */
 
-:root {
---navy: #071a33;
---navy-light: #102c4e;
---red: #b52d35;
---red-dark: #8f2028;
---cream: #f7f5f0;
---white: #ffffff;
---black: #111827;
---text: #243044;
---muted: #6b778c;
---line: #e3e7ed;
---soft: #f3f6fa;
---shadow: 0 20px 60px rgba(7, 26, 51, 0.12);
---radius: 24px;
+:root{
+    --navy:#071a35;
+    --navy2:#0d2b52;
+    --blue:#1558a6;
+    --sky:#eaf4ff;
+    --gold:#d7a52b;
+    --gold2:#f1ca63;
+    --white:#ffffff;
+    --black:#111827;
+    --text:#374151;
+    --muted:#6b7280;
+    --light:#f7f9fc;
+    --border:#e5e7eb;
+    --shadow:0 18px 50px rgba(7,26,53,.12);
+    --radius:18px;
 }
 
-/* RESET */
-
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-html {
-scroll-behavior: smooth;
-scroll-padding-top: 90px;
+html{
+    scroll-behavior:smooth;
+    scroll-padding-top:85px;
 }
 
-body {
-font-family: "DM Sans", sans-serif;
-background: var(--white);
-color: var(--text);
-overflow-x: hidden;
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    color:var(--text);
+    background:#fff;
+    line-height:1.6;
+    overflow-x:hidden;
 }
 
-body.menu-open {
-overflow: hidden;
-}
-
-img {
-max-width: 100%;
-display: block;
-}
-
-a {
-color: inherit;
-text-decoration: none;
+a{
+    text-decoration:none;
+    color:inherit;
 }
 
 button,
 input,
 textarea,
-select {
-font: inherit;
+select{
+    font:inherit;
 }
 
-button {
-cursor: pointer;
+button{
+    cursor:pointer;
 }
 
-/* =========================================================
-PRELOADER
-========================================================= */
-
-.preloader {
-position: fixed;
-inset: 0;
-background: var(--navy);
-z-index: 9999;
-display: flex;
-align-items: center;
-justify-content: center;
-transition: opacity .6s ease, visibility .6s ease;
+img{
+    max-width:100%;
+    display:block;
 }
 
-.preloader.hide {
-opacity: 0;
-visibility: hidden;
+.container{
+    width:min(1180px,92%);
+    margin:auto;
 }
 
-.loader-content {
-text-align: center;
-color: white;
+/* =========================
+   TOP BAR
+   ========================= */
+
+.topbar{
+    background:var(--navy);
+    color:#fff;
+    font-size:13px;
 }
 
-.loader-logo {
-width: 75px;
-height: 75px;
-border-radius: 24px;
-background: var(--red);
-display: grid;
-place-items: center;
-font-family: "Playfair Display", serif;
-font-size: 36px;
-margin: auto;
-animation: pulse 1.5s infinite;
-}
-
-.loader-content p {
-margin-top: 18px;
-letter-spacing: 3px;
-text-transform: uppercase;
-font-size: 11px;
-color: #ccd7e4;
-}
-
-@keyframes pulse {
-0%,100% {
-transform: scale(1);
-}
-50% {
-transform: scale(1.08);
-}
-}
-
-/* =========================================================
-TOP BAR
-========================================================= */
-
-.topbar {
-background: var(--navy);
-color: #dbe4ef;
-min-height: 38px;
-padding: 9px 5%;
-display: flex;
-align-items: center;
-justify-content: space-between;
-gap: 20px;
-font-size: 12px;
+.topbar-inner{
+    min-height:38px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
 }
 
 .topbar-left,
-.topbar-right {
-display: flex;
-gap: 20px;
-align-items: center;
+.topbar-right{
+    display:flex;
+    align-items:center;
+    gap:18px;
 }
 
-/* =========================================================
-NAVIGATION
-========================================================= */
-
-.navbar {
-position: sticky;
-top: 0;
-z-index: 1000;
-background: rgba(255,255,255,.95);
-backdrop-filter: blur(18px);
-border-bottom: 1px solid rgba(7,26,51,.08);
-transition: .3s ease;
+.topbar a:hover{
+    color:var(--gold2);
 }
 
-.navbar.scrolled {
-box-shadow: 0 8px 30px rgba(0,0,0,.08);
-}
+/* =========================
+   NAVBAR
+   ========================= */
 
-.nav-container {
-width: min(1200px, 90%);
-margin: auto;
-min-height: 82px;
-display: flex;
-align-items: center;
-justify-content: space-between;
-gap: 25px;
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(255,255,255,.96);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(0,0,0,.07);
 }
 
-.brand {
-display: flex;
-align-items: center;
-gap: 12px;
+.nav-inner{
+    min-height:78px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
 }
 
-.brand-mark {
-width: 48px;
-height: 48px;
-border-radius: 15px;
-background: var(--red);
-color: white;
-display: grid;
-place-items: center;
-font-family: "Playfair Display", serif;
-font-size: 26px;
-box-shadow: 0 8px 20px rgba(181,45,53,.22);
-}
-
-.brand-text {
-font-weight: 700;
-color: var(--navy);
-line-height: 1.1;
-}
-
-.brand-text small {
-display: block;
-margin-top: 5px;
-color: var(--muted);
-font-size: 9px;
-letter-spacing: 1.4px;
-text-transform: uppercase;
-font-weight: 600;
-}
-
-.nav-links {
-display: flex;
-align-items: center;
-gap: 25px;
-font-size: 13px;
-font-weight: 600;
-}
-
-.nav-links a {
-position: relative;
-transition: .25s ease;
-}
-
-.nav-links a:not(.nav-cta)::after {
-content: "";
-position: absolute;
-left: 0;
-bottom: -8px;
-width: 0;
-height: 2px;
-background: var(--red);
-transition: .25s ease;
-}
-
-.nav-links a:hover {
-color: var(--red);
-}
-
-.nav-links a:hover::after {
-width: 100%;
-}
-
-.nav-cta {
-background: var(--red);
-color: white !important;
-padding: 12px 19px;
-border-radius: 999px;
-}
-
-.nav-cta:hover {
-background: var(--red-dark);
-transform: translateY(-2px);
-}
-
-.menu-button {
-display: none;
-border: 0;
-background: var(--navy);
-color: white;
-width: 45px;
-height: 45px;
-border-radius: 13px;
-font-size: 21px;
-}
-
-/* =========================================================
-HERO
-========================================================= */
-
-.hero {
-min-height: 790px;
-position: relative;
-overflow: hidden;
-display: flex;
-align-items: center;
-
-background:
-linear-gradient(
-90deg,
-rgba(4,18,36,.94) 0%,
-rgba(4,18,36,.82) 35%,
-rgba(4,18,36,.42) 68%,
-rgba(4,18,36,.12) 100%
-),
-url("hero-bg.jpg") center center / cover no-repeat;
-}
-
-.hero::before {
-content: "";
-position: absolute;
-width: 550px;
-height: 550px;
-right: -200px;
-top: -200px;
-border: 1px solid rgba(255,255,255,.15);
-border-radius: 50%;
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
 }
 
-.hero::after {
-content: "";
-position: absolute;
-inset: auto 0 0;
-height: 170px;
-background: linear-gradient(transparent, white);
+.brand-logo{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    background:var(--navy);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:24px;
+    font-weight:800;
+    border:3px solid var(--gold);
 }
 
-.hero-content {
-width: min(1200px, 90%);
-margin: auto;
-position: relative;
-z-index: 2;
-padding: 90px 0;
+.brand-text strong{
+    display:block;
+    color:var(--navy);
+    font-size:17px;
+    line-height:1.1;
 }
 
-.hero-tag {
-color: #f0c9cc;
-text-transform: uppercase;
-letter-spacing: 3px;
-font-weight: 700;
-font-size: 11px;
-margin-bottom: 22px;
+.brand-text span{
+    display:block;
+    color:var(--muted);
+    font-size:10px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    margin-top:4px;
 }
 
-.hero h1 {
-color: white;
-font-family: "Playfair Display", serif;
-font-size: clamp(50px, 7vw, 92px);
-line-height: .98;
-font-weight: 600;
-max-width: 850px;
-margin-bottom: 28px;
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:25px;
 }
 
-.hero h1 span {
-color: #efc6c9;
+.nav-links a{
+    font-size:14px;
+    font-weight:600;
+    color:#25354b;
+    position:relative;
+    padding:28px 0;
 }
 
-.hero-description {
-color: #e1e8f0;
-max-width: 650px;
-line-height: 1.8;
-font-size: 18px;
-margin-bottom: 34px;
+.nav-links a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:20px;
+    width:0;
+    height:2px;
+    background:var(--gold);
+    transition:.3s;
 }
 
-.hero-buttons {
-display: flex;
-gap: 12px;
-flex-wrap: wrap;
+.nav-links a:hover{
+    color:var(--blue);
 }
 
-.btn {
-min-height: 50px;
-padding: 14px 23px;
-border-radius: 999px;
-display: inline-flex;
-align-items: center;
-justify-content: center;
-gap: 8px;
-font-weight: 700;
-font-size: 13px;
-border: 1px solid transparent;
-transition: .3s ease;
+.nav-links a:hover::after{
+    width:100%;
 }
 
-.btn-primary {
-background: var(--red);
-color: white;
-box-shadow: 0 14px 30px rgba(181,45,53,.25);
+.nav-apply{
+    background:var(--gold)!important;
+    color:var(--navy)!important;
+    padding:11px 18px!important;
+    border-radius:8px;
+}
+
+.nav-apply::after{
+    display:none;
+}
+
+.menu-btn{
+    display:none;
+    border:0;
+    background:none;
+    font-size:28px;
+    color:var(--navy);
 }
 
-.btn-primary:hover {
-background: var(--red-dark);
-transform: translateY(-3px);
-}
+/* =========================
+   HERO
+   ========================= */
 
-.btn-outline-light {
-border-color: rgba(255,255,255,.6);
-color: white;
-background: rgba(255,255,255,.06);
+.hero{
+    min-height:690px;
+    position:relative;
+    display:flex;
+    align-items:center;
+    color:#fff;
+    background:
+        linear-gradient(90deg,rgba(3,17,37,.88) 0%,rgba(3,17,37,.62) 45%,rgba(3,17,37,.18) 100%),
+        url("hero-bg.jpg") center center / cover no-repeat;
 }
 
-.btn-outline-light:hover {
-background: white;
-color: var(--navy);
+.hero::after{
+    content:"";
+    position:absolute;
+    inset:auto 0 0;
+    height:100px;
+    background:linear-gradient(transparent,#fff);
+    pointer-events:none;
 }
 
-.hero-info {
-display: flex;
-gap: 45px;
-flex-wrap: wrap;
-margin-top: 65px;
-color: #d2dce8;
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:720px;
+    padding:90px 0;
 }
 
-.hero-info-item strong {
-display: block;
-color: white;
-font-size: 18px;
-margin-bottom: 4px;
+.hero-tag{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 14px;
+    border:1px solid rgba(255,255,255,.45);
+    border-radius:100px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(5px);
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+    margin-bottom:22px;
 }
 
-.hero-info-item span {
-font-size: 12px;
+.hero h1{
+    font-size:clamp(42px,6vw,76px);
+    line-height:1.02;
+    letter-spacing:-2px;
+    margin-bottom:22px;
 }
 
-/* =========================================================
-COMMON
-========================================================= */
-
-.section {
-padding: 110px 5%;
+.hero h1 span{
+    color:var(--gold2);
 }
 
-.container {
-width: min(1200px, 100%);
-margin: auto;
+.hero p{
+    font-size:18px;
+    max-width:650px;
+    color:rgba(255,255,255,.9);
+    margin-bottom:32px;
 }
 
-.section-header {
-display: flex;
-justify-content: space-between;
-align-items: end;
-gap: 35px;
-margin-bottom: 50px;
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:13px;
 }
 
-.kicker {
-color: var(--red);
-font-size: 11px;
-text-transform: uppercase;
-letter-spacing: 2px;
-font-weight: 800;
-margin-bottom: 10px;
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+    border:0;
+    padding:14px 23px;
+    border-radius:8px;
+    font-weight:700;
+    font-size:14px;
+    transition:.25s;
 }
 
-.section-title {
-color: var(--navy);
-font-family: "Playfair Display", serif;
-font-size: clamp(38px, 5vw, 60px);
-line-height: 1.05;
+.btn-primary{
+    background:var(--gold);
+    color:var(--navy);
 }
 
-.section-description {
-color: var(--muted);
-line-height: 1.8;
-max-width: 470px;
+.btn-primary:hover{
+    background:var(--gold2);
+    transform:translateY(-2px);
 }
-
-/* =========================================================
-ABOUT
-========================================================= */
 
-.about-section {
-background: var(--cream);
+.btn-light{
+    background:#fff;
+    color:var(--navy);
 }
 
-.about-grid {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 75px;
-align-items: center;
+.btn-light:hover{
+    background:#f0f4f9;
+    transform:translateY(-2px);
 }
 
-.about-image {
-position: relative;
+.btn-outline{
+    background:transparent;
+    border:1px solid var(--border);
+    color:var(--navy);
 }
 
-.about-image img {
-width: 100%;
-min-height: 520px;
-object-fit: cover;
-border-radius: 30px;
-box-shadow: var(--shadow);
+.btn-outline:hover{
+    border-color:var(--blue);
+    color:var(--blue);
 }
 
-.about-badge {
-position: absolute;
-bottom: 25px;
-left: 25px;
-background: rgba(255,255,255,.95);
-padding: 20px 24px;
-border-radius: 20px;
-box-shadow: 0 15px 35px rgba(0,0,0,.12);
+.hero-stats{
+    margin-top:48px;
+    display:flex;
+    gap:42px;
+    flex-wrap:wrap;
 }
 
-.about-badge strong {
-color: var(--navy);
-font-family: "Playfair Display", serif;
-font-size: 30px;
+.hero-stat strong{
+    display:block;
+    font-size:26px;
+    color:#fff;
 }
 
-.about-badge span {
-display: block;
-color: var(--muted);
-font-size: 11px;
-margin-top: 2px;
+.hero-stat span{
+    font-size:12px;
+    color:rgba(255,255,255,.72);
 }
 
-.about-content p {
-color: var(--muted);
-line-height: 1.9;
-margin-bottom: 18px;
+/* =========================
+   GENERAL SECTIONS
+   ========================= */
+
+section{
+    padding:95px 0;
 }
 
-.stats {
-display: grid;
-grid-template-columns: repeat(3,1fr);
-gap: 12px;
-margin-top: 30px;
+.section-head{
+    max-width:720px;
+    margin-bottom:48px;
 }
 
-.stat {
-background: white;
-border: 1px solid var(--line);
-border-radius: 18px;
-padding: 20px;
+.section-label{
+    color:var(--blue);
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:10px;
 }
 
-.stat strong {
-display: block;
-color: var(--navy);
-font-family: "Playfair Display", serif;
-font-size: 28px;
+.section-head h2{
+    color:var(--navy);
+    font-size:clamp(30px,4vw,48px);
+    line-height:1.1;
+    letter-spacing:-1px;
+    margin-bottom:16px;
 }
 
-.stat span {
-color: var(--muted);
-font-size: 11px;
+.section-head p{
+    color:var(--muted);
+    font-size:16px;
 }
 
-/* =========================================================
-PROGRAMS
-========================================================= */
+/* =========================
+   ABOUT
+   ========================= */
 
-.programs-grid {
-display: grid;
-grid-template-columns: repeat(3,1fr);
-gap: 18px;
+.about{
+    background:#fff;
 }
 
-.program-card {
-border: 1px solid var(--line);
-border-radius: 25px;
-padding: 32px;
-background: white;
-transition: .3s ease;
-position: relative;
-overflow: hidden;
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
 }
 
-.program-card::after {
-content: "";
-position: absolute;
-width: 100px;
-height: 100px;
-border-radius: 50%;
-background: #f8e7e8;
-right: -45px;
-top: -45px;
+.about-image{
+    min-height:500px;
+    border-radius:var(--radius);
+    overflow:hidden;
+    position:relative;
+    background:
+        linear-gradient(135deg,rgba(7,26,53,.15),rgba(7,26,53,.02)),
+        url("hero-bg.jpg") center / cover no-repeat;
+    box-shadow:var(--shadow);
 }
 
-.program-card:hover {
-transform: translateY(-7px);
-box-shadow: var(--shadow);
-border-color: #ead0d2;
+.about-badge{
+    position:absolute;
+    bottom:25px;
+    left:25px;
+    background:#fff;
+    padding:18px 22px;
+    border-radius:12px;
+    box-shadow:var(--shadow);
 }
 
-.program-icon {
-width: 52px;
-height: 52px;
-border-radius: 16px;
-background: #f8e7e8;
-color: var(--red);
-display: grid;
-place-items: center;
-font-weight: 800;
-margin-bottom: 25px;
-position: relative;
-z-index: 2;
+.about-badge strong{
+    color:var(--navy);
+    font-size:25px;
+    display:block;
 }
 
-.program-card h3 {
-color: var(--navy);
-font-size: 21px;
-margin-bottom: 10px;
+.about-badge span{
+    color:var(--muted);
+    font-size:12px;
 }
 
-.program-card p {
-color: var(--muted);
-font-size: 14px;
-line-height: 1.7;
+.about-content h3{
+    color:var(--navy);
+    font-size:30px;
+    margin-bottom:18px;
 }
 
-.card-link {
-color: var(--red);
-display: inline-flex;
-margin-top: 22px;
-font-size: 13px;
-font-weight: 800;
+.about-content p{
+    color:var(--muted);
+    margin-bottom:18px;
 }
 
-/* =========================================================
-WHY MISBAH
-========================================================= */
+.check-list{
+    list-style:none;
+    margin:25px 0;
+}
 
-.why-section {
-background: var(--navy);
-color: white;
+.check-list li{
+    display:flex;
+    gap:12px;
+    margin:13px 0;
+    font-weight:600;
+    color:#26364c;
 }
 
-.why-section .section-title {
-color: white;
+.check{
+    width:22px;
+    height:22px;
+    flex:none;
+    border-radius:50%;
+    background:#e8f2ff;
+    color:var(--blue);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:12px;
+    font-weight:bold;
 }
+
+/* =========================
+   PROGRAMS
+   ========================= */
 
-.why-section .section-description {
-color: #bfcbd9;
+.programs{
+    background:var(--light);
 }
 
-.why-grid {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 70px;
-align-items: center;
+.program-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
 }
 
-.why-quote {
-padding: 42px;
-border-radius: 30px;
-background: linear-gradient(145deg,#16375f,#0a203b);
-border: 1px solid rgba(255,255,255,.1);
+.program-card{
+    background:#fff;
+    border:1px solid var(--border);
+    padding:30px;
+    border-radius:var(--radius);
+    transition:.3s;
+    position:relative;
+    overflow:hidden;
 }
 
-.why-quote p {
-font-family: "Playfair Display", serif;
-font-size: 38px;
-line-height: 1.2;
+.program-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    height:4px;
+    width:0;
+    background:var(--gold);
+    transition:.3s;
 }
 
-.why-quote span {
-display: block;
-margin-top: 22px;
-color: #b8c5d4;
-font-size: 12px;
+.program-card:hover{
+    transform:translateY(-7px);
+    box-shadow:var(--shadow);
 }
 
-.features {
-margin-top: 50px;
-display: grid;
-grid-template-columns: repeat(4,1fr);
-gap: 15px;
+.program-card:hover::before{
+    width:100%;
 }
 
-.feature {
-border: 1px solid rgba(255,255,255,.11);
-background: rgba(255,255,255,.035);
-border-radius: 20px;
-padding: 23px;
+.program-icon{
+    width:54px;
+    height:54px;
+    border-radius:14px;
+    background:#eaf3ff;
+    color:var(--blue);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:25px;
+    margin-bottom:22px;
 }
 
-.feature-number {
-color: #e8bfc2;
-font-size: 12px;
-font-weight: 800;
-margin-bottom: 20px;
+.program-card h3{
+    color:var(--navy);
+    font-size:20px;
+    margin-bottom:10px;
 }
 
-.feature h4 {
-color: white;
-margin-bottom: 8px;
+.program-card p{
+    color:var(--muted);
+    font-size:14px;
+    margin-bottom:20px;
 }
 
-.feature p {
-color: #aebdce;
-font-size: 12px;
-line-height: 1.6;
+.program-link{
+    color:var(--blue);
+    font-weight:700;
+    font-size:13px;
 }
 
-/* =========================================================
-CAMPUS
-========================================================= */
+/* =========================
+   WHY US
+   ========================= */
 
-.campus-section {
-background: white;
+.why{
+    background:#fff;
 }
 
-.gallery {
-display: grid;
-grid-template-columns: 1.4fr .8fr;
-grid-template-rows: 250px 250px;
-gap: 15px;
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
 }
 
-.gallery-item {
-overflow: hidden;
-border-radius: 24px;
-position: relative;
+.why-card{
+    padding:30px 22px;
+    border:1px solid var(--border);
+    border-radius:16px;
+    text-align:center;
 }
 
-.gallery-item.large {
-grid-row: span 2;
+.why-icon{
+    font-size:35px;
+    margin-bottom:15px;
 }
 
-.gallery-item img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-transition: transform .7s ease;
+.why-card h3{
+    color:var(--navy);
+    font-size:18px;
+    margin-bottom:9px;
 }
 
-.gallery-item:hover img {
-transform: scale(1.06);
+.why-card p{
+    color:var(--muted);
+    font-size:13px;
 }
 
-.gallery-overlay {
-position: absolute;
-inset: auto 0 0;
-padding: 25px;
-color: white;
-background: linear-gradient(transparent,rgba(0,0,0,.75));
-}
+/* =========================
+   CAMPUS
+   ========================= */
 
-.gallery-overlay strong {
-display: block;
-font-size: 18px;
+.campus{
+    background:var(--navy);
+    color:#fff;
 }
 
-.gallery-overlay span {
-font-size: 11px;
+.campus .section-label{
+    color:var(--gold2);
 }
 
-/* =========================================================
-ADMISSIONS
-========================================================= */
+.campus .section-head h2{
+    color:#fff;
+}
 
-.admission-section {
-background: var(--cream);
+.campus .section-head p{
+    color:rgba(255,255,255,.68);
 }
 
-.admission-box {
-background: var(--red);
-color: white;
-border-radius: 32px;
-padding: 60px;
-display: grid;
-grid-template-columns: 1fr auto;
-gap: 40px;
-align-items: center;
-box-shadow: 0 25px 60px rgba(181,45,53,.2);
+.gallery{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    grid-template-rows:250px 250px;
+    gap:12px;
 }
 
-.admission-box .kicker {
-color: #f5d4d6;
+.gallery-item{
+    border:0;
+    padding:0;
+    border-radius:15px;
+    overflow:hidden;
+    position:relative;
+    background:#163456;
 }
 
-.admission-box h2 {
-font-family: "Playfair Display", serif;
-font-size: clamp(38px,5vw,58px);
-margin-bottom: 14px;
+.gallery-item:first-child{
+    grid-row:span 2;
 }
 
-.admission-box p {
-color: #f8dfe1;
-max-width: 680px;
-line-height: 1.8;
+.gallery-photo{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
 }
 
-.admission-box .btn {
-background: white;
-color: var(--red);
-white-space: nowrap;
+.gallery-item:hover .gallery-photo{
+    transform:scale(1.06);
 }
 
-.admission-box .btn:hover {
-transform: translateY(-3px);
+.gallery-overlay{
+    position:absolute;
+    inset:auto 0 0;
+    padding:25px 18px 18px;
+    background:linear-gradient(transparent,rgba(0,0,0,.75));
+    text-align:left;
+    color:#fff;
 }
 
-/* =========================================================
-FACILITIES
-========================================================= */
+/* =========================
+   ADMISSIONS
+   ========================= */
 
-.facilities-section {
-background: var(--soft);
+.admissions{
+    background:
+        linear-gradient(100deg,rgba(7,26,53,.97),rgba(13,43,82,.91)),
+        url("hero-bg.jpg") center/cover;
+    color:#fff;
 }
 
-.facilities-grid {
-display: grid;
-grid-template-columns: repeat(3,1fr);
-gap: 18px;
+.admission-box{
+    display:grid;
+    grid-template-columns:1.3fr .7fr;
+    gap:60px;
+    align-items:center;
 }
 
-.facility {
-background: white;
-border-radius: 22px;
-padding: 30px;
-border: 1px solid var(--line);
-transition: .3s ease;
+.admission-box h2{
+    font-size:clamp(32px,4vw,52px);
+    line-height:1.08;
+    margin-bottom:18px;
 }
 
-.facility:hover {
-transform: translateY(-5px);
-box-shadow: var(--shadow);
+.admission-box p{
+    color:rgba(255,255,255,.76);
+    max-width:680px;
+    margin-bottom:25px;
 }
 
-.facility-icon {
-font-size: 28px;
-margin-bottom: 20px;
+.admission-points{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    margin:25px 0;
 }
 
-.facility h3 {
-color: var(--navy);
-margin-bottom: 9px;
+.admission-point{
+    background:rgba(255,255,255,.07);
+    padding:13px;
+    border-radius:8px;
+    font-size:13px;
 }
 
-.facility p {
-color: var(--muted);
-line-height: 1.7;
-font-size: 13px;
+.admission-card{
+    background:#fff;
+    color:var(--text);
+    border-radius:18px;
+    padding:30px;
+    box-shadow:var(--shadow);
 }
 
-/* =========================================================
-EVENTS
-========================================================= */
-
-.events-section {
-background: white;
+.admission-card h3{
+    color:var(--navy);
+    font-size:23px;
+    margin-bottom:8px;
 }
 
-.events-grid {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 20px;
+.admission-card p{
+    color:var(--muted);
+    font-size:13px;
 }
 
-.event-card {
-overflow: hidden;
-border-radius: 25px;
-border: 1px solid var(--line);
-background: white;
-transition: .3s ease;
+/* =========================
+   FACILITIES
+   ========================= */
+
+.facilities{
+    background:var(--light);
 }
 
-.event-card:hover {
-box-shadow: var(--shadow);
-transform: translateY(-5px);
+.facility-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
 }
 
-.event-image {
-height: 270px;
-overflow: hidden;
+.facility{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:15px;
+    padding:25px;
+    display:flex;
+    gap:17px;
+    align-items:flex-start;
+    transition:.25s;
 }
 
-.event-image img {
-width: 100%;
-height: 100%;
-object-fit: cover;
+.facility:hover{
+    transform:translateY(-4px);
+    box-shadow:var(--shadow);
 }
 
-.event-content {
-padding: 25px;
+.facility-icon{
+    width:46px;
+    height:46px;
+    flex:none;
+    border-radius:12px;
+    background:#eaf3ff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:21px;
 }
 
-.event-label {
-color: var(--red);
-font-size: 10px;
-text-transform: uppercase;
-letter-spacing: 1.5px;
-font-weight: 800;
+.facility h3{
+    color:var(--navy);
+    font-size:17px;
+    margin-bottom:4px;
 }
 
-.event-content h3 {
-color: var(--navy);
-margin: 9px 0;
-font-size: 21px;
+.facility p{
+    color:var(--muted);
+    font-size:13px;
 }
+
+/* =========================
+   EVENTS
+   ========================= */
 
-.event-content p {
-color: var(--muted);
-line-height: 1.7;
-font-size: 13px;
+.events{
+    background:#fff;
 }
 
-/* =========================================================
-FAQ
-========================================================= */
+.events-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
 
-.faq-section {
-background: var(--cream);
+.event-card{
+    border:1px solid var(--border);
+    border-radius:15px;
+    overflow:hidden;
+    background:#fff;
 }
 
-.faq-container {
-max-width: 900px;
-margin: auto;
+.event-top{
+    padding:28px;
+    background:var(--navy);
+    color:#fff;
 }
 
-.faq-item {
-background: white;
-border: 1px solid var(--line);
-border-radius: 18px;
-margin-bottom: 12px;
-overflow: hidden;
+.event-date{
+    color:var(--gold2);
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:1px;
+    text-transform:uppercase;
 }
 
-.faq-question {
-width: 100%;
-border: 0;
-background: white;
-padding: 21px 24px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-text-align: left;
-color: var(--navy);
-font-weight: 700;
+.event-top h3{
+    margin-top:10px;
+    font-size:21px;
 }
 
-.faq-question span {
-color: var(--red);
-font-size: 20px;
-transition: .3s;
+.event-body{
+    padding:22px;
 }
 
-.faq-answer {
-max-height: 0;
-overflow: hidden;
-transition: max-height .4s ease;
+.event-body p{
+    color:var(--muted);
+    font-size:13px;
+    margin-bottom:16px;
 }
+
+/* =========================
+   FAQ
+   ========================= */
 
-.faq-answer p {
-padding: 0 24px 22px;
-color: var(--muted);
-line-height: 1.7;
-font-size: 14px;
+.faq{
+    background:var(--light);
 }
 
-.faq-item.active .faq-question span {
-transform: rotate(45deg);
+.faq-wrap{
+    max-width:850px;
+    margin:auto;
 }
 
-/* =========================================================
-CONTACT
-========================================================= */
+.faq-item{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:12px;
+    margin-bottom:12px;
+    overflow:hidden;
+}
 
-.contact-section {
-background: white;
+.faq-question{
+    width:100%;
+    border:0;
+    background:#fff;
+    padding:20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    text-align:left;
+    color:var(--navy);
+    font-weight:700;
 }
 
-.contact-grid {
-display: grid;
-grid-template-columns: .9fr 1.1fr;
-gap: 25px;
+.faq-plus{
+    font-size:24px;
+    color:var(--blue);
+    transition:.3s;
 }
 
-.contact-card {
-border: 1px solid var(--line);
-border-radius: 27px;
-padding: 35px;
+.faq-answer{
+    max-height:0;
+    overflow:hidden;
+    transition:.3s ease;
 }
 
-.contact-item {
-display: flex;
-gap: 15px;
-padding: 18px 0;
-border-bottom: 1px solid var(--line);
+.faq-answer p{
+    padding:0 20px 20px;
+    color:var(--muted);
+    font-size:14px;
 }
 
-.contact-item:last-of-type {
-border-bottom: 0;
+.faq-item.active .faq-answer{
+    max-height:200px;
 }
 
-.contact-icon {
-width: 43px;
-height: 43px;
-flex: 0 0 43px;
-border-radius: 13px;
-background: #f8e7e8;
-color: var(--red);
-display: grid;
-place-items: center;
-font-size: 18px;
+.faq-item.active .faq-plus{
+    transform:rotate(45deg);
 }
 
-.contact-item strong {
-display: block;
-color: var(--navy);
-margin-bottom: 4px;
+/* =========================
+   CONTACT
+   ========================= */
+
+.contact{
+    background:#fff;
 }
 
-.contact-item span {
-color: var(--muted);
-font-size: 13px;
-line-height: 1.6;
+.contact-grid{
+    display:grid;
+    grid-template-columns:.85fr 1.15fr;
+    gap:55px;
 }
 
-.contact-buttons {
-display: flex;
-flex-wrap: wrap;
-gap: 10px;
-margin-top: 25px;
+.contact-info{
+    background:var(--navy);
+    color:#fff;
+    padding:35px;
+    border-radius:18px;
 }
 
-.map-box {
-min-height: 100%;
-border-radius: 27px;
-background:
-linear-gradient(rgba(7,26,51,.1),rgba(7,26,51,.1)),
-repeating-linear-gradient(
-45deg,
-#e9edf2,
-#e9edf2 10px,
-#e1e6ec 10px,
-#e1e6ec 20px
-);
-display: grid;
-place-items: center;
-text-align: center;
-padding: 35px;
+.contact-info h3{
+    font-size:27px;
+    margin-bottom:15px;
 }
 
-.map-pin {
-font-size: 55px;
-margin-bottom: 10px;
+.contact-info > p{
+    color:rgba(255,255,255,.68);
+    font-size:14px;
+    margin-bottom:28px;
 }
 
-.map-box h3 {
-color: var(--navy);
-font-family: "Playfair Display", serif;
-font-size: 28px;
+.contact-item{
+    display:flex;
+    gap:14px;
+    margin:22px 0;
 }
 
-.map-box p {
-color: var(--muted);
-margin: 10px auto 20px;
-max-width: 400px;
-line-height: 1.6;
+.contact-item-icon{
+    width:42px;
+    height:42px;
+    border-radius:10px;
+    background:rgba(255,255,255,.1);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex:none;
 }
 
-/* =========================================================
-ADMISSION MODAL
-========================================================= */
+.contact-item strong{
+    display:block;
+    font-size:13px;
+    margin-bottom:3px;
+}
 
-.modal {
-position: fixed;
-inset: 0;
-z-index: 5000;
-background: rgba(4,18,36,.75);
-backdrop-filter: blur(10px);
-display: flex;
-align-items: center;
-justify-content: center;
-padding: 20px;
-opacity: 0;
-visibility: hidden;
-transition: .3s;
+.contact-item span,
+.contact-item a{
+    color:rgba(255,255,255,.7);
+    font-size:13px;
 }
 
-.modal.show {
-opacity: 1;
-visibility: visible;
+.contact-item a:hover{
+    color:var(--gold2);
 }
 
-.modal-box {
-width: min(620px,100%);
-background: white;
-border-radius: 28px;
-padding: 35px;
-position: relative;
-transform: translateY(20px);
-transition: .3s;
-max-height: 90vh;
-overflow-y: auto;
+.contact-form{
+    padding:5px 0;
 }
 
-.modal.show .modal-box {
-transform: translateY(0);
+.contact-form h3{
+    color:var(--navy);
+    font-size:28px;
+    margin-bottom:10px;
 }
 
-.close-modal {
-position: absolute;
-right: 20px;
-top: 20px;
-border: 0;
-width: 38px;
-height: 38px;
-border-radius: 50%;
-background: #f1f3f6;
-color: var(--navy);
-font-size: 20px;
+.contact-form > p{
+    color:var(--muted);
+    font-size:14px;
+    margin-bottom:25px;
 }
 
-.modal-box h2 {
-color: var(--navy);
-font-family: "Playfair Display", serif;
-font-size: 35px;
-margin-bottom: 8px;
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
 }
 
-.modal-box > p {
-color: var(--muted);
-font-size: 13px;
-margin-bottom: 25px;
+.form-group{
+    margin-bottom:15px;
 }
 
-.form-group {
-margin-bottom: 16px;
+.form-group.full{
+    grid-column:1/-1;
 }
 
-.form-group label {
-display: block;
-font-size: 12px;
-font-weight: 700;
-color: var(--navy);
-margin-bottom: 7px;
+.form-group label{
+    display:block;
+    color:#26364c;
+    font-size:13px;
+    font-weight:700;
+    margin-bottom:7px;
 }
 
 .form-group input,
-.form-group select,
-.form-group textarea {
-width: 100%;
-border: 1px solid #dce1e8;
-border-radius: 13px;
-padding: 13px 14px;
-outline: none;
-color: var(--text);
-background: white;
+.form-group textarea,
+.form-group select{
+    width:100%;
+    border:1px solid #d9dee7;
+    border-radius:8px;
+    padding:13px 14px;
+    outline:none;
+    background:#fff;
+    color:var(--text);
 }
 
-.form-group textarea {
-min-height: 100px;
-resize: vertical;
+.form-group textarea{
+    min-height:125px;
+    resize:vertical;
 }
 
 .form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-border-color: var(--red);
-box-shadow: 0 0 0 3px rgba(181,45,53,.08);
+.form-group textarea:focus,
+.form-group select:focus{
+    border-color:var(--blue);
+    box-shadow:0 0 0 3px rgba(21,88,166,.08);
 }
 
-.form-submit {
-width: 100%;
-border: 0;
-margin-top: 5px;
+/* =========================
+   FOOTER
+   ========================= */
+
+footer{
+    background:#040f20;
+    color:#fff;
+    padding:50px 0 25px;
 }
 
-/* =========================================================
-FOOTER
-========================================================= */
-
-footer {
-background: #06172d;
-color: #c3cfdd;
-padding: 70px 5% 25px;
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.4fr 1fr 1fr;
+    gap:50px;
+    padding-bottom:40px;
+    border-bottom:1px solid rgba(255,255,255,.1);
 }
 
-.footer-grid {
-width: min(1200px,100%);
-margin: auto;
-display: grid;
-grid-template-columns: 1.3fr .7fr .7fr .8fr;
-gap: 40px;
+.footer-brand h3{
+    font-size:21px;
+    margin-bottom:10px;
 }
 
-.footer-brand {
-color: white;
-font-size: 21px;
-font-weight: 700;
-margin-bottom: 15px;
+.footer-brand p{
+    color:rgba(255,255,255,.55);
+    font-size:13px;
+    max-width:420px;
 }
 
-.footer-column p {
-color: #9eafc2;
-line-height: 1.8;
-font-size: 13px;
-max-width: 390px;
+.footer-col h4{
+    font-size:14px;
+    margin-bottom:17px;
 }
 
-.footer-column h4 {
-color: white;
-margin-bottom: 18px;
+.footer-col a{
+    display:block;
+    color:rgba(255,255,255,.55);
+    font-size:13px;
+    margin:9px 0;
 }
 
-.footer-column a {
-display: block;
-color: #aebdce;
-margin-bottom: 11px;
-font-size: 13px;
-transition: .2s;
+.footer-col a:hover{
+    color:var(--gold2);
 }
 
-.footer-column a:hover {
-color: white;
-transform: translateX(3px);
+.footer-bottom{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    padding-top:22px;
+    color:rgba(255,255,255,.42);
+    font-size:11px;
 }
 
-.footer-bottom {
-width: min(1200px,100%);
-margin: 45px auto 0;
-padding-top: 22px;
-border-top: 1px solid rgba(255,255,255,.1);
-display: flex;
-justify-content: space-between;
-gap: 20px;
-font-size: 11px;
-color: #8093aa;
+.footer-bottom a{
+    color:var(--gold2);
 }
 
-/* =========================================================
-FLOATING WHATSAPP
-========================================================= */
+/* =========================
+   FLOATING BUTTONS
+   ========================= */
 
-.whatsapp {
-position: fixed;
-right: 22px;
-bottom: 22px;
-z-index: 2000;
-width: 58px;
-height: 58px;
-border-radius: 50%;
-background: #25d366;
-color: white;
-display: grid;
-place-items: center;
-font-size: 25px;
-box-shadow: 0 12px 30px rgba(0,0,0,.2);
-transition: .3s;
+.whatsapp{
+    position:fixed;
+    right:22px;
+    bottom:22px;
+    z-index:900;
+    width:56px;
+    height:56px;
+    border-radius:50%;
+    background:#20b957;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:26px;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+    transition:.25s;
 }
 
-.whatsapp:hover {
-transform: scale(1.1);
+.whatsapp:hover{
+    transform:scale(1.08);
 }
 
-/* =========================================================
-BACK TO TOP
-========================================================= */
-
-.back-top {
-position: fixed;
-right: 22px;
-bottom: 92px;
-width: 42px;
-height: 42px;
-border: 0;
-border-radius: 50%;
-background: var(--navy);
-color: white;
-display: grid;
-place-items: center;
-z-index: 1500;
-opacity: 0;
-visibility: hidden;
-transition: .3s;
+.back-top{
+    position:fixed;
+    right:22px;
+    bottom:90px;
+    z-index:900;
+    width:43px;
+    height:43px;
+    border:0;
+    border-radius:50%;
+    background:var(--navy);
+    color:#fff;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    box-shadow:var(--shadow);
 }
 
-.back-top.show {
-opacity: 1;
-visibility: visible;
+.back-top.show{
+    display:flex;
 }
 
-/* =========================================================
-REVEAL ANIMATION
-========================================================= */
+/* =========================
+   MODAL
+   ========================= */
 
-.reveal {
-opacity: 0;
-transform: translateY(30px);
-transition: opacity .8s ease, transform .8s ease;
+.modal{
+    position:fixed;
+    inset:0;
+    z-index:2000;
+    background:rgba(2,10,22,.72);
+    backdrop-filter:blur(6px);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
 }
 
-.reveal.visible {
-opacity: 1;
-transform: translateY(0);
+.modal.show{
+    display:flex;
 }
 
-/* =========================================================
-RESPONSIVE
-========================================================= */
-
-@media (max-width: 1000px) {
-
-.nav-links {
-gap: 15px;
+.modal-box{
+    background:#fff;
+    width:min(560px,100%);
+    max-height:90vh;
+    overflow:auto;
+    border-radius:18px;
+    padding:32px;
+    position:relative;
+    animation:modalIn .25s ease;
 }
 
-.why-grid,
-.about-grid,
-.contact-grid {
-grid-template-columns: 1fr;
+@keyframes modalIn{
+    from{
+        opacity:0;
+        transform:translateY(15px) scale(.98);
+    }
+    to{
+        opacity:1;
+        transform:none;
+    }
 }
 
-.features {
-grid-template-columns: repeat(2,1fr);
+.modal-close{
+    position:absolute;
+    top:15px;
+    right:17px;
+    width:35px;
+    height:35px;
+    border:0;
+    background:#f1f3f6;
+    border-radius:50%;
+    color:#333;
+    font-size:20px;
 }
 
-.footer-grid {
-grid-template-columns: 1fr 1fr;
-}
-}
-
-@media (max-width: 800px) {
-
-.topbar {
-display: none;
+.modal-box h2{
+    color:var(--navy);
+    margin-bottom:7px;
 }
 
-.nav-container {
-min-height: 70px;
+.modal-box > p{
+    color:var(--muted);
+    font-size:13px;
+    margin-bottom:22px;
 }
 
-.menu-button {
-display: block;
+/* =========================
+   TOAST
+   ========================= */
+
+.toast{
+    position:fixed;
+    left:50%;
+    bottom:25px;
+    transform:translate(-50%,120px);
+    z-index:3000;
+    background:var(--navy);
+    color:#fff;
+    padding:13px 20px;
+    border-radius:8px;
+    box-shadow:var(--shadow);
+    font-size:13px;
+    transition:.3s;
 }
 
-.nav-links {
-position: fixed;
-top: 70px;
-left: 5%;
-right: 5%;
-background: white;
-border: 1px solid var(--line);
-border-radius: 20px;
-padding: 20px;
-display: none;
-flex-direction: column;
-align-items: stretch;
-gap: 5px;
-box-shadow: 0 25px 60px rgba(0,0,0,.14);
+.toast.show{
+    transform:translate(-50%,0);
 }
 
-.nav-links.open {
-display: flex;
+/* =========================
+   SCROLL ANIMATION
+   ========================= */
+
+.reveal{
+    opacity:0;
+    transform:translateY(25px);
+    transition:.7s ease;
 }
 
-.nav-links a {
-padding: 14px 10px;
+.reveal.visible{
+    opacity:1;
+    transform:none;
 }
 
-.nav-links a:not(.nav-cta)::after {
-display: none;
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media(max-width:1000px){
+
+    .nav-links{
+        gap:15px;
+    }
+
+    .program-grid,
+    .events-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .why-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .facility-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .about-grid{
+        gap:35px;
+    }
+
+    .admission-box{
+        grid-template-columns:1fr;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
 }
 
-.nav-cta {
-text-align: center;
-margin-top: 5px;
+@media(max-width:780px){
+
+    .topbar{
+        display:none;
+    }
+
+    .nav-inner{
+        min-height:68px;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .nav-links{
+        position:absolute;
+        top:68px;
+        left:0;
+        right:0;
+        background:#fff;
+        display:none;
+        flex-direction:column;
+        align-items:stretch;
+        gap:0;
+        padding:10px 5%;
+        border-bottom:1px solid var(--border);
+        box-shadow:0 15px 25px rgba(0,0,0,.08);
+    }
+
+    .nav-links.open{
+        display:flex;
+    }
+
+    .nav-links a{
+        padding:13px 0;
+        border-bottom:1px solid #f0f0f0;
+    }
+
+    .nav-links a::after{
+        display:none;
+    }
+
+    .nav-apply{
+        margin:8px 0;
+        text-align:center;
+    }
+
+    .hero{
+        min-height:650px;
+        background-position:65% center;
+    }
+
+    .hero-content{
+        padding:70px 0;
+    }
+
+    .hero h1{
+        letter-spacing:-1px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .hero-stats{
+        gap:24px;
+    }
+
+    section{
+        padding:70px 0;
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .about-image{
+        min-height:390px;
+    }
+
+    .program-grid,
+    .events-grid,
+    .facility-grid{
+        grid-template-columns:1fr;
+    }
+
+    .why-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .gallery{
+        grid-template-columns:1fr 1fr;
+        grid-template-rows:220px 180px 180px;
+    }
+
+    .gallery-item:first-child{
+        grid-column:1/-1;
+        grid-row:auto;
+    }
+
+    .admission-points{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+    }
 }
 
-.hero {
-min-height: 720px;
-background-position: 60% center;
-}
+@media(max-width:500px){
 
-.hero-content {
-padding: 70px 0;
-}
+    .brand-text strong{
+        font-size:14px;
+    }
 
-.programs-grid,
-.facilities-grid {
-grid-template-columns: 1fr 1fr;
-}
+    .brand-text span{
+        font-size:8px;
+    }
 
-.gallery {
-grid-template-columns: 1fr;
-grid-template-rows: 300px 220px 220px;
-}
+    .brand-logo{
+        width:42px;
+        height:42px;
+        font-size:20px;
+    }
 
-.gallery-item.large {
-grid-row: auto;
-}
+    .hero-buttons{
+        flex-direction:column;
+        align-items:stretch;
+    }
 
-.events-grid {
-grid-template-columns: 1fr;
-}
+    .btn{
+        width:100%;
+    }
 
-.admission-box {
-grid-template-columns: 1fr;
-padding: 42px;
-}
+    .why-grid{
+        grid-template-columns:1fr;
+    }
 
-.footer-grid {
-grid-template-columns: 1fr 1fr;
-}
-}
+    .gallery{
+        grid-template-columns:1fr;
+        grid-template-rows:260px 180px 180px 180px;
+    }
 
-@media (max-width: 560px) {
+    .gallery-item:first-child{
+        grid-column:auto;
+    }
 
-.section {
-padding: 75px 5%;
-}
+    .form-grid{
+        grid-template-columns:1fr;
+    }
 
-.brand-text {
-font-size: 14px;
-}
+    .form-group.full{
+        grid-column:auto;
+    }
 
-.brand-text small {
-font-size: 7px;
+    .modal-box{
+        padding:25px 18px;
+    }
 }
-
-.brand-mark {
-width: 42px;
-height: 42px;
-font-size: 22px;
-}
-
-.hero {
-min-height: 700px;
-}
-
-.hero h1 {
-font-size: 51px;
-}
-
-.hero-description {
-font-size: 15px;
-}
-
-.hero-info {
-gap: 22px;
-margin-top: 45px;
-}
-
-.section-header {
-display: block;
-}
-
-.section-description {
-margin-top: 16px;
-}
-
-.stats {
-grid-template-columns: 1fr;
-}
-
-.programs-grid,
-.facilities-grid,
-.features {
-grid-template-columns: 1fr;
-}
-
-.why-quote {
-padding: 30px;
-}
-
-.why-quote p {
-font-size: 31px;
-}
-
-.admission-box {
-padding: 32px;
-}
-
-.admission-box h2 {
-font-size: 40px;
-}
-
-.contact-card {
-padding: 25px;
-}
-
-.footer-grid {
-grid-template-columns: 1fr;
-}
-
-.footer-bottom {
-display: block;
-line-height: 1.8;
-}
-
-.footer-bottom span {
-display: block;
-}
-
-.whatsapp {
-right: 16px;
-bottom: 16px;
-}
-
-.back-top {
-right: 16px;
-bottom: 84px;
-}
-}
-
 </style>
 </head>
 
 <body>
 
-<!-- =======================================================
-PRELOADER
-======================================================= -->
-
-<div class="preloader" id="preloader">
-<div class="loader-content">
-<div class="loader-logo">M</div>
-<p>Misbah Women's College</p>
-</div>
-</div>
-
-
-<!-- =======================================================
-TOP BAR
-======================================================= -->
+<!-- =========================================================
+     TOP BAR
+     ========================================================= -->
 
 <div class="topbar">
+    <div class="container topbar-inner">
+        <div class="topbar-left">
+            <span>🎓 Empowering Women Through Education</span>
+        </div>
 
-<div class="topbar-left">
-<span>📍 Katipalla, Mangaluru</span>
-<span>🎓 Women's Education</span>
-</div>
-
-<div class="topbar-right">
-<span>Admissions 2026</span>
-<span>Official Website Demo</span>
-</div>
-
-</div>
-
-
-<!-- =======================================================
-NAVIGATION
-======================================================= -->
-
-<nav class="navbar" id="navbar">
-
-<div class="nav-container">
-
-<a href="#home" class="brand">
-
-<div class="brand-mark">
-M
-</div>
-
-<div class="brand-text">
-Misbah Women's College
-<small>Education • Empowerment • Excellence</small>
-</div>
-
-</a>
-
-
-<div class="nav-links" id="navLinks">
-
-<a href="#home">Home</a>
-
-<a href="#about">About</a>
-
-<a href="#programs">Programs</a>
-
-<a href="#campus">Campus</a>
-
-<a href="#facilities">Facilities</a>
-
-<a href="#events">Events</a>
-
-<a href="#contact">Contact</a>
-
-<a href="#admissions"
-class="nav-cta">
-Apply Now
-</a>
-
+        <div class="topbar-right">
+            <a href="#contact">Contact</a>
+            <a href="#admissions">Admissions</a>
+        </div>
+    </div>
 </div>
 
 
-<button class="menu-button"
-id="menuButton"
-aria-label="Open menu">
-☰
-</button>
+<!-- =========================================================
+     NAVIGATION
+     ========================================================= -->
 
-</div>
+<header class="navbar">
+    <div class="container nav-inner">
 
-</nav>
+        <a href="#home" class="brand">
+            <div class="brand-logo">M</div>
+
+            <div class="brand-text">
+                <strong>Misbah Women's College</strong>
+                <span>Mangaluru • Karnataka</span>
+            </div>
+        </a>
+
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+            ☰
+        </button>
+
+        <nav class="nav-links" id="navLinks">
+
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#programs">Programs</a>
+            <a href="#campus">Campus</a>
+            <a href="#facilities">Facilities</a>
+            <a href="#events">Events</a>
+            <a href="#contact">Contact</a>
+
+            <a href="#admissions" class="nav-apply">
+                Apply Now
+            </a>
+
+        </nav>
+
+    </div>
+</header>
 
 
-<!-- =======================================================
-HERO
-======================================================= -->
+<!-- =========================================================
+     HERO
+     ========================================================= -->
 
 <section class="hero" id="home">
 
-<div class="hero-content reveal">
+    <div class="container">
 
-<div class="hero-tag">
-Misbah Women's College • Mangaluru
-</div>
+        <div class="hero-content reveal">
+
+            <div class="hero-tag">
+                ✦ Admissions & Education
+            </div>
+
+            <h1>
+                Learn.<br>
+                Lead.<br>
+                <span>Become.</span>
+            </h1>
+
+            <p>
+                A progressive educational environment designed
+                to empower young women with knowledge, confidence,
+                skills and opportunities for a brighter future.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button class="btn btn-primary" onclick="openAdmission()">
+                    Apply for Admission →
+                </button>
+
+                <a href="#programs" class="btn btn-light">
+                    Explore Programs
+                </a>
+
+            </div>
+
+            <div class="hero-stats">
+
+                <div class="hero-stat">
+                    <strong>2016</strong>
+                    <span>Established</span>
+                </div>
+
+                <div class="hero-stat">
+                    <strong>Quality</strong>
+                    <span>Education Focus</span>
+                </div>
+
+                <div class="hero-stat">
+                    <strong>Women</strong>
+                    <span>Empowerment</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 
-<h1>
-Empowering Women.
-<br>
-<span>Inspiring Futures.</span>
-</h1>
+<!-- =========================================================
+     ABOUT
+     ========================================================= -->
+
+<section class="about" id="about">
+
+    <div class="container">
+
+        <div class="about-grid">
+
+            <div class="about-image reveal">
+
+                <div class="about-badge">
+                    <strong>2016</strong>
+                    <span>Established</span>
+                </div>
+
+            </div>
+
+            <div class="about-content reveal">
+
+                <div class="section-label">
+                    About Misbah
+                </div>
+
+                <h3>
+                    Education that builds confidence,
+                    character and opportunity.
+                </h3>
+
+                <p>
+                    Misbah Women's College is committed to creating
+                    an inspiring academic environment where students
+                    can discover their strengths, develop practical
+                    skills and prepare themselves for the future.
+                </p>
+
+                <p>
+                    Our approach combines academic learning with
+                    technology, personal development, leadership and
+                    opportunities beyond the classroom.
+                </p>
+
+                <ul class="check-list">
+
+                    <li>
+                        <span class="check">✓</span>
+                        Student-focused learning environment
+                    </li>
+
+                    <li>
+                        <span class="check">✓</span>
+                        Focus on academic excellence
+                    </li>
+
+                    <li>
+                        <span class="check">✓</span>
+                        Technology and modern learning
+                    </li>
+
+                    <li>
+                        <span class="check">✓</span>
+                        Personality and leadership development
+                    </li>
+
+                </ul>
+
+                <a href="#contact" class="btn btn-outline">
+                    Know More →
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 
-<p class="hero-description">
+<!-- =========================================================
+     PROGRAMS
+     ========================================================= -->
 
-A place where education creates confidence,
-knowledge creates opportunity and every student
-is encouraged to build a meaningful future.
+<section class="programs" id="programs">
 
-</p>
+    <div class="container">
+
+        <div class="section-head reveal">
+
+            <div class="section-label">
+                Academic Programs
+            </div>
+
+            <h2>
+                Choose your path.
+            </h2>
+
+            <p>
+                Explore academic opportunities designed to prepare
+                students for higher education, careers and entrepreneurship.
+            </p>
+
+        </div>
+
+        <div class="program-grid">
+
+            <article class="program-card reveal">
+
+                <div class="program-icon">🎓</div>
+
+                <h3>PU College</h3>
+
+                <p>
+                    Build a strong academic foundation and prepare
+                    confidently for higher education.
+                </p>
+
+                <a href="#contact" class="program-link">
+                    Enquire Now →
+                </a>
+
+            </article>
 
 
-<div class="hero-buttons">
+            <article class="program-card reveal">
 
-<a href="#programs"
-class="btn btn-primary">
-Explore Programs →
+                <div class="program-icon">📊</div>
+
+                <h3>B.Com</h3>
+
+                <p>
+                    Develop knowledge in commerce, accounting,
+                    business and financial management.
+                </p>
+
+                <a href="#contact" class="program-link">
+                    Enquire Now →
+                </a>
+
+            </article>
+
+
+            <article class="program-card reveal">
+
+                <div class="program-icon">💻</div>
+
+                <h3>BCA</h3>
+
+                <p>
+                    Build practical computer application and
+                    technology skills for the digital world.
+                </p>
+
+                <a href="#contact" class="program-link">
+                    Enquire Now →
+                </a>
+
+            </article>
+
+
+            <article class="program-card reveal">
+
+                <div class="program-icon">🤖</div>
+
+                <h3>Artificial Intelligence</h3>
+
+                <p>
+                    Explore modern technology, AI concepts,
+                    innovation and emerging career opportunities.
+                </p>
+
+                <a href="#contact" class="program-link">
+                    Enquire Now →
+                </a>
+
+            </article>
+
+
+            <article class="program-card reveal">
+
+                <div class="program-icon">🔐</div>
+
+                <h3>Cyber Security</h3>
+
+                <p>
+                    Discover the fundamentals of digital security,
+                    cyber awareness and technology.
+                </p>
+
+                <a href="#contact" class="program-link">
+                    Enquire Now →
+                </a>
+
+            </article>
+
+
+            <article class="program-card reveal">
+
+                <div class="program-icon">＋</div>
+
+                <h3>More Programs</h3>
+
+                <p>
+                    Contact the college to learn about additional
+                    courses, programs and current admissions.
+                </p>
+
+                <a href="#contact" class="program-link">
+                    Contact College →
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     WHY MISBAH
+     ========================================================= -->
+
+<section class="why" id="why">
+
+    <div class="container">
+
+        <div class="section-head reveal">
+
+            <div class="section-label">
+                Why Misbah
+            </div>
+
+            <h2>
+                More than a classroom.
+            </h2>
+
+            <p>
+                We aim to create an environment where students
+                can learn, grow and confidently build their future.
+            </p>
+
+        </div>
+
+        <div class="why-grid">
+
+            <div class="why-card reveal">
+                <div class="why-icon">📚</div>
+                <h3>Academic Focus</h3>
+                <p>Strong foundation for academic growth and higher education.</p>
+            </div>
+
+            <div class="why-card reveal">
+                <div class="why-icon">💡</div>
+                <h3>Innovation</h3>
+                <p>Encouraging students to think creatively and solve problems.</p>
+            </div>
+
+            <div class="why-card reveal">
+                <div class="why-icon">👩‍💼</div>
+                <h3>Leadership</h3>
+                <p>Building confidence, communication and leadership skills.</p>
+            </div>
+
+            <div class="why-card reveal">
+                <div class="why-icon">🌍</div>
+                <h3>Future Ready</h3>
+                <p>Preparing students for a changing digital and professional world.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CAMPUS
+     ========================================================= -->
+
+<section class="campus" id="campus">
+
+    <div class="container">
+
+        <div class="section-head reveal">
+
+            <div class="section-label">
+                Our Campus
+            </div>
+
+            <h2>
+                A place to learn and grow.
+            </h2>
+
+            <p>
+                Discover the environment and campus identity
+                of Misbah Women's College.
+            </p>
+
+        </div>
+
+        <div class="gallery">
+
+            <button class="gallery-item reveal"
+                    onclick="openImage('hero-bg.jpg','Misbah Women’s College Campus')">
+
+                <img
+                    src="hero-bg.jpg"
+                    class="gallery-photo"
+                    alt="Misbah Women's College campus"
+                >
+
+                <div class="gallery-overlay">
+                    <strong>Misbah Women's College</strong><br>
+                    <small>Campus</small>
+                </div>
+
+            </button>
+
+
+            <button class="gallery-item reveal"
+                    onclick="openImage('hero-bg.jpg','College Building')">
+
+                <img
+                    src="hero-bg.jpg"
+                    class="gallery-photo"
+                    alt="College building"
+                >
+
+                <div class="gallery-overlay">
+                    <strong>College Building</strong>
+                </div>
+
+            </button>
+
+
+            <button class="gallery-item reveal"
+                    onclick="openImage('hero-bg.jpg','Learning Environment')">
+
+                <img
+                    src="hero-bg.jpg"
+                    class="gallery-photo"
+                    alt="Learning environment"
+                >
+
+                <div class="gallery-overlay">
+                    <strong>Learning Environment</strong>
+                </div>
+
+            </button>
+
+
+            <button class="gallery-item reveal"
+                    onclick="openImage('hero-bg.jpg','Student Life')">
+
+                <img
+                    src="hero-bg.jpg"
+                    class="gallery-photo"
+                    alt="Student life"
+                >
+
+                <div class="gallery-overlay">
+                    <strong>Student Life</strong>
+                </div>
+
+            </button>
+
+
+            <button class="gallery-item reveal"
+                    onclick="openImage('hero-bg.jpg','Campus Experience')">
+
+                <img
+                    src="hero-bg.jpg"
+                    class="gallery-photo"
+                    alt="Campus experience"
+                >
+
+                <div class="gallery-overlay">
+                    <strong>Campus Experience</strong>
+                </div>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ADMISSIONS
+     ========================================================= -->
+
+<section class="admissions" id="admissions">
+
+    <div class="container">
+
+        <div class="admission-box">
+
+            <div class="reveal">
+
+                <div class="section-label" style="color:#f1ca63;">
+                    Admissions Open
+                </div>
+
+                <h2>
+                    Your next chapter<br>
+                    starts here.
+                </h2>
+
+                <p>
+                    Take the first step towards your academic journey.
+                    Submit an enquiry and the college team can guide
+                    you through the admission process.
+                </p>
+
+                <div class="admission-points">
+
+                    <div class="admission-point">
+                        ✓ Course guidance
+                    </div>
+
+                    <div class="admission-point">
+                        ✓ Admission enquiry
+                    </div>
+
+                    <div class="admission-point">
+                        ✓ Program information
+                    </div>
+
+                    <div class="admission-point">
+                        ✓ Campus information
+                    </div>
+
+                </div>
+
+                <button class="btn btn-primary" onclick="openAdmission()">
+                    Start Admission Enquiry →
+                </button>
+
+            </div>
+
+
+            <div class="admission-card reveal">
+
+                <h3>
+                    Interested in joining?
+                </h3>
+
+                <p>
+                    Send your details and our team can contact you
+                    regarding available programs and admissions.
+                </p>
+
+                <br>
+
+                <button
+                    class="btn btn-primary"
+                    style="width:100%;"
+                    onclick="openAdmission()"
+                >
+                    Apply Now
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FACILITIES
+     ========================================================= -->
+
+<section class="facilities" id="facilities">
+
+    <div class="container">
+
+        <div class="section-head reveal">
+
+            <div class="section-label">
+                Campus Facilities
+            </div>
+
+            <h2>
+                Designed for student growth.
+            </h2>
+
+            <p>
+                A student-friendly environment supporting learning,
+                technology, collaboration and personal development.
+            </p>
+
+        </div>
+
+        <div class="facility-grid">
+
+            <div class="facility reveal">
+                <div class="facility-icon">📖</div>
+                <div>
+                    <h3>Learning Spaces</h3>
+                    <p>Academic spaces designed for focused learning.</p>
+                </div>
+            </div>
+
+            <div class="facility reveal">
+                <div class="facility-icon">💻</div>
+                <div>
+                    <h3>Computer Facilities</h3>
+                    <p>Technology-enabled learning and practical exposure.</p>
+                </div>
+            </div>
+
+            <div class="facility reveal">
+                <div class="facility-icon">🔬</div>
+                <div>
+                    <h3>Practical Learning</h3>
+                    <p>Opportunities for students to apply their knowledge.</p>
+                </div>
+            </div>
+
+            <div class="facility reveal">
+                <div class="facility-icon">🎤</div>
+                <div>
+                    <h3>Seminars & Events</h3>
+                    <p>Activities that encourage communication and confidence.</p>
+                </div>
+            </div>
+
+            <div class="facility reveal">
+                <div class="facility-icon">👥</div>
+                <div>
+                    <h3>Student Community</h3>
+                    <p>Positive peer interaction and collaborative experiences.</p>
+                </div>
+            </div>
+
+            <div class="facility reveal">
+                <div class="facility-icon">🌱</div>
+                <div>
+                    <h3>Personal Development</h3>
+                    <p>Supporting confidence, skills and leadership development.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     EVENTS
+     ========================================================= -->
+
+<section class="events" id="events">
+
+    <div class="container">
+
+        <div class="section-head reveal">
+
+            <div class="section-label">
+                Student Life
+            </div>
+
+            <h2>
+                Learn beyond the classroom.
+            </h2>
+
+            <p>
+                Academic and co-curricular activities help students
+                discover their interests and develop new skills.
+            </p>
+
+        </div>
+
+        <div class="events-grid">
+
+            <article class="event-card reveal">
+
+                <div class="event-top">
+                    <div class="event-date">Campus Activity</div>
+                    <h3>Student Events</h3>
+                </div>
+
+                <div class="event-body">
+                    <p>
+                        Engage in events and activities that encourage
+                        confidence, teamwork and creativity.
+                    </p>
+
+                    <a href="#contact" class="program-link">
+                        Enquire →
+                    </a>
+                </div>
+
+            </article>
+
+
+            <article class="event-card reveal">
+
+                <div class="event-top">
+                    <div class="event-date">Academic</div>
+                    <h3>Seminars & Workshops</h3>
+                </div>
+
+                <div class="event-body">
+                    <p>
+                        Learn from workshops and knowledge-sharing
+                        opportunities beyond regular classroom lessons.
+                    </p>
+
+                    <a href="#contact" class="program-link">
+                        Enquire →
+                    </a>
+                </div>
+
+            </article>
+
+
+            <article class="event-card reveal">
+
+                <div class="event-top">
+                    <div class="event-date">Student Experience</div>
+                    <h3>Clubs & Activities</h3>
+                </div>
+
+                <div class="event-body">
+                    <p>
+                        Explore interests, develop communication skills
+                        and participate in campus life.
+                    </p>
+
+                    <a href="#contact" class="program-link">
+                        Enquire →
+                    </a>
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FAQ
+     ========================================================= -->
+
+<section class="faq" id="faq">
+
+    <div class="container">
+
+        <div class="section-head reveal" style="margin-left:auto;margin-right:auto;text-align:center;">
+
+            <div class="section-label">
+                FAQ
+            </div>
+
+            <h2>
+                Frequently asked questions.
+            </h2>
+
+            <p>
+                Quick answers for students and parents.
+            </p>
+
+        </div>
+
+        <div class="faq-wrap">
+
+            <div class="faq-item reveal">
+
+                <button class="faq-question">
+                    <span>How can I enquire about admission?</span>
+                    <span class="faq-plus">+</span>
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        Click any Apply Now or Admission Enquiry button
+                        on this website and submit your details.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="faq-item reveal">
+
+                <button class="faq-question">
+                    <span>Where is Misbah Women's College located?</span>
+                    <span class="faq-plus">+</span>
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        Misbah Women's College is located in the
+                        Katipalla area of Mangaluru, Karnataka.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="faq-item reveal">
+
+                <button class="faq-question">
+                    <span>Which courses are available?</span>
+                    <span class="faq-plus">+</span>
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        The demo website highlights PU College,
+                        B.Com, BCA, Artificial Intelligence and
+                        Cyber Security. Contact the college for
+                        the current official course list.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="faq-item reveal">
+
+                <button class="faq-question">
+                    <span>Can I visit the campus?</span>
+                    <span class="faq-plus">+</span>
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        Use the contact section to enquire about
+                        campus visits, admission guidance and
+                        current college timings.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACT
+     ========================================================= -->
+
+<section class="contact" id="contact">
+
+    <div class="container">
+
+        <div class="section-head reveal">
+
+            <div class="section-label">
+                Contact
+            </div>
+
+            <h2>
+                Let's start a conversation.
+            </h2>
+
+            <p>
+                Students and parents can use this section for
+                admissions, course enquiries and campus information.
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+            <div class="contact-info reveal">
+
+                <h3>
+                    Misbah Women's College
+                </h3>
+
+                <p>
+                    We are here to help students take the next
+                    step in their educational journey.
+                </p>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-item-icon">📍</div>
+
+                    <div>
+                        <strong>Location</strong>
+
+                        <span>
+                            Katipalla, Mangaluru,<br>
+                            Karnataka, India
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-item-icon">📞</div>
+
+                    <div>
+                        <strong>Phone</strong>
+
+                        <a href="#contact" onclick="showToast('College phone number will be added after confirmation.')">
+                            Contact College
+                        </a>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-item-icon">✉️</div>
+
+                    <div>
+                        <strong>Email</strong>
+
+                        <a href="#contact" onclick="showToast('College email will be added after confirmation.')">
+                            Send Enquiry
+                        </a>
+                    </div>
+
+                </div>
+
+
+                <a
+                    class="btn btn-primary"
+                    style="margin-top:10px;"
+                    target="_blank"
+                    rel="noopener"
+                    href="https://www.google.com/maps/search/?api=1&query=Misbah%20Women's%20College%20Katipalla%20Mangalore"
+                >
+                    Open Google Maps →
+                </a>
+
+            </div>
+
+
+            <div class="contact-form reveal">
+
+                <h3>
+                    Send an Enquiry
+                </h3>
+
+                <p>
+                    Fill in your details and submit the form.
+                </p>
+
+                <form id="contactForm">
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+
+                            <label for="name">
+                                Full Name *
+                            </label>
+
+                            <input
+                                id="name"
+                                type="text"
+                                placeholder="Enter your name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="phone">
+                                Phone Number *
+                            </label>
+
+                            <input
+                                id="phone"
+                                type="tel"
+                                placeholder="Enter phone number"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="email">
+                                Email
+                            </label>
+
+                            <input
+                                id="email"
+                                type="email"
+                                placeholder="Enter email"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="course">
+                                Interested Program
+                            </label>
+
+                            <select id="course">
+
+                                <option value="">
+                                    Select program
+                                </option>
+
+                                <option>PU College</option>
+                                <option>B.Com</option>
+                                <option>BCA</option>
+                                <option>Artificial Intelligence</option>
+                                <option>Cyber Security</option>
+                                <option>Other</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group full">
+
+                            <label for="message">
+                                Message
+                            </label>
+
+                            <textarea
+                                id="message"
+                                placeholder="Write your enquiry..."
+                            ></textarea>
+
+                        </div>
+
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        Submit Enquiry →
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div class="footer-brand">
+
+                <h3>
+                    Misbah Women's College
+                </h3>
+
+                <p>
+                    Empowering women through education,
+                    confidence, technology and opportunity.
+                </p>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <h4>
+                    Quick Links
+                </h4>
+
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#programs">Programs</a>
+                <a href="#campus">Campus</a>
+                <a href="#facilities">Facilities</a>
+                <a href="#contact">Contact</a>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <h4>
+                    Admissions
+                </h4>
+
+                <a href="#admissions">Apply Now</a>
+                <a href="#programs">Courses</a>
+                <a href="#faq">FAQs</a>
+                <a href="#contact">Enquiry</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © <span id="year"></span> Misbah Women's College.
+                All rights reserved.
+            </span>
+
+            <span>
+                Website Concept by
+                <a href="#home">Velora Digital</a>
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     WHATSAPP
+     ========================================================= -->
+
+<a
+    class="whatsapp"
+    href="https://wa.me/918240000000?text=Hello%20Misbah%20Women's%20College%2C%20I%20would%20like%20to%20know%20about%20admissions."
+    target="_blank"
+    rel="noopener"
+    aria-label="WhatsApp"
+>
+    ☎
 </a>
+
+
+<!-- =========================================================
+     BACK TO TOP
+     ========================================================= -->
 
 <button
-class="btn btn-outline-light"
-onclick="openAdmission()">
-Admission Enquiry
+    class="back-top"
+    id="backTop"
+    aria-label="Back to top"
+>
+    ↑
 </button>
 
-</div>
+
+<!-- =========================================================
+     ADMISSION MODAL
+     ========================================================= -->
+
+<div class="modal" id="admissionModal">
+
+    <div class="modal-box">
+
+        <button
+            class="modal-close"
+            onclick="closeAdmission()"
+            aria-label="Close"
+        >
+            ×
+        </button>
+
+        <h2>
+            Admission Enquiry
+        </h2>
+
+        <p>
+            Enter your details and submit your admission enquiry.
+        </p>
 
 
-<div class="hero-info">
+        <form id="admissionForm">
 
-<div class="hero-info-item">
-<strong>Since 2016</strong>
-<span>Institutional journey</span>
-</div>
+            <div class="form-group">
 
-<div class="hero-info-item">
-<strong>PU + Degree</strong>
-<span>Academic pathways</span>
-</div>
+                <label for="admissionName">
+                    Student Name *
+                </label>
 
-<div class="hero-info-item">
-<strong>Katipalla</strong>
-<span>Mangaluru, Karnataka</span>
-</div>
+                <input
+                    id="admissionName"
+                    type="text"
+                    placeholder="Enter student name"
+                    required
+                >
 
-</div>
-
-</div>
-
-</section>
+            </div>
 
 
-<!-- =======================================================
-ABOUT
-======================================================= -->
+            <div class="form-group">
 
-<section class="section about-section"
-id="about">
+                <label for="admissionPhone">
+                    Phone Number *
+                </label>
 
-<div class="container">
+                <input
+                    id="admissionPhone"
+                    type="tel"
+                    placeholder="Enter phone number"
+                    required
+                >
 
-<div class="about-grid">
-
-<div class="about-image reveal">
-
-<img src="hero-bg.jpg"
-alt="Misbah Women's College Campus">
-
-<div class="about-badge">
-
-<strong>2016</strong>
-
-<span>
-Established
-</span>
-
-</div>
-
-</div>
+            </div>
 
 
-<div class="about-content reveal">
+            <div class="form-group">
 
-<div class="kicker">
-About Misbah
-</div>
+                <label for="admissionCourse">
+                    Interested Program
+                </label>
 
-<h2 class="section-title">
-A place to learn,
-grow and lead.
-</h2>
+                <select id="admissionCourse">
 
-<br>
+                    <option value="">
+                        Select program
+                    </option>
 
-<p>
-Misbah Women's College is an educational
-institution located in Katipalla, Mangaluru,
-focused on creating meaningful academic
-opportunities for women.
-</p>
+                    <option>PU College</option>
+                    <option>B.Com</option>
+                    <option>BCA</option>
+                    <option>Artificial Intelligence</option>
+                    <option>Cyber Security</option>
+                    <option>Other</option>
 
-<p>
-The institution was founded in 2016 by the
-Misbah Knowledge Foundation and is associated
-with Mangalore University.
-</p>
+                </select>
 
-<p>
-This official website concept brings the
-college's academic programs, campus life,
-admissions and institutional information
-together in one modern digital experience.
-</p>
-
-<div class="stats">
-
-<div class="stat">
-<strong>2016</strong>
-<span>Established</span>
-</div>
-
-<div class="stat">
-<strong>PU</strong>
-<span>Academic pathway</span>
-</div>
-
-<div class="stat">
-<strong>UG</strong>
-<span>Degree pathway</span>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
+            </div>
 
 
-<!-- =======================================================
-PROGRAMS
-======================================================= -->
+            <div class="form-group">
 
-<section class="section"
-id="programs">
+                <label for="admissionMessage">
+                    Message
+                </label>
 
-<div class="container">
+                <textarea
+                    id="admissionMessage"
+                    placeholder="Any questions?"
+                ></textarea>
 
-<div class="section-header reveal">
+            </div>
 
-<div>
 
-<div class="kicker">
-Academic Pathways
-</div>
+            <button
+                type="submit"
+                class="btn btn-primary"
+                style="width:100%;"
+            >
+                Submit Admission Enquiry →
+            </button>
 
-<h2 class="section-title">
-Explore our programs.
-</h2>
+        </form>
 
-</div>
-
-<p class="section-description">
-
-Discover academic pathways designed to
-support students in their next stage of
-education and career.
-
-</p>
+    </div>
 
 </div>
 
 
-<div class="programs-grid">
+<!-- =========================================================
+     IMAGE MODAL
+     ========================================================= -->
 
+<div class="modal" id="imageModal">
 
-<article class="program-card reveal">
+    <div class="modal-box" style="padding:10px;max-width:900px;">
 
-<div class="program-icon">
-PU
-</div>
+        <button
+            class="modal-close"
+            onclick="closeImage()"
+            aria-label="Close"
+        >
+            ×
+        </button>
 
-<h3>
-PU College
-</h3>
+        <img
+            id="largeImage"
+            src=""
+            alt=""
+            style="width:100%;border-radius:12px;"
+        >
 
-<p>
-Present PUC streams, subjects,
-eligibility and admission information
-in a clear student-friendly format.
-</p>
+        <div style="padding:12px 10px 5px;">
+            <strong id="imageCaption" style="color:#071a35;"></strong>
+        </div>
 
-<a href="#admissions"
-class="card-link">
-Enquire about admission →
-</a>
-
-</article>
-
-
-<article class="program-card reveal">
-
-<div class="program-icon">
-BC
-</div>
-
-<h3>
-B.Com
-</h3>
-
-<p>
-A dedicated program experience for
-commerce students with course and
-admission information.
-</p>
-
-<a href="#admissions"
-class="card-link">
-Enquire about B.Com →
-</a>
-
-</article>
-
-
-<article class="program-card reveal">
-
-<div class="program-icon">
-CA
-</div>
-
-<h3>
-BCA
-</h3>
-
-<p>
-A technology-focused academic pathway
-presented with clear information for
-students and parents.
-</p>
-
-<a href="#admissions"
-class="card-link">
-Enquire about BCA →
-</a>
-
-</article>
-
-
-<article class="program-card reveal">
-
-<div class="program-icon">
-AI
-</div>
-
-<h3>
-Artificial Intelligence
-</h3>
-
-<p>
-A modern digital section for emerging
-technology-focused programs where
-officially offered.
-</p>
-
-<a href="#admissions"
-class="card-link">
-Explore →
-</a>
-
-</article>
-
-
-<article class="program-card reveal">
-
-<div class="program-icon">
-CS
-</div>
-
-<h3>
-Cyber Security
-</h3>
-
-<p>
-Showcase future-ready technology
-learning opportunities and career
-pathways.
-</p>
-
-<a href="#admissions"
-class="card-link">
-Explore →
-</a>
-
-</article>
-
-
-<article class="program-card reveal">
-
-<div class="program-icon">
-+
-</div>
-
-<h3>
-More Programs
-</h3>
-
-<p>
-Additional approved programs can be
-added with dedicated course pages,
-eligibility and admission details.
-</p>
-
-<a href="#contact"
-class="card-link">
-Ask the college →
-</a>
-
-</article>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =======================================================
-WHY MISBAH
-======================================================= -->
-
-<section class="section why-section"
-id="why">
-
-<div class="container">
-
-<div class="why-grid">
-
-<div class="reveal">
-
-<div class="kicker">
-Why Misbah
-</div>
-
-<h2 class="section-title">
-More than a website.
-<br>
-A digital front door.
-</h2>
-
-<br>
-
-<p class="section-description">
-
-The premium experience is designed
-around what students and parents need:
-discover the institution, understand
-programs, experience the campus and
-make an admission enquiry.
-
-</p>
+    </div>
 
 </div>
 
 
-<div class="why-quote reveal">
+<!-- =========================================================
+     TOAST
+     ========================================================= -->
 
-<p>
-“Your future deserves
-a place that believes
-in it.”
-</p>
-
-<span>
-Misbah Women's College —
-Premium website concept
-</span>
-
-</div>
-
+<div class="toast" id="toast">
+    Enquiry submitted successfully.
 </div>
 
 
-<div class="features">
+<!-- =========================================================
+     JAVASCRIPT
+     ========================================================= -->
 
-<div class="feature reveal">
-<div class="feature-number">01</div>
-<h4>Student First</h4>
-<p>
-Simple navigation that makes important
-information easy to find.
-</p>
-</div>
+<script>
 
-<div class="feature reveal">
-<div class="feature-number">02</div>
-<h4>Strong Identity</h4>
-<p>
-A visual experience built around the
-college's own campus and story.
-</p>
-</div>
+/* =========================================================
+   MOBILE MENU
+   ========================================================= */
 
-<div class="feature reveal">
-<div class="feature-number">03</div>
-<h4>Admission Focused</h4>
-<p>
-Clear admission actions throughout
-the website.
-</p>
-</div>
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
 
-<div class="feature reveal">
-<div class="feature-number">04</div>
-<h4>Future Ready</h4>
-<p>
-The structure can grow with programs,
-events and announcements.
-</p>
-</div>
+if(menuBtn && navLinks){
 
-</div>
+    menuBtn.addEventListener("click", function(){
 
-</div>
+        navLinks.classList.toggle("open");
 
-</section>
+        menuBtn.textContent =
+            navLinks.classList.contains("open")
+            ? "×"
+            : "☰";
+
+    });
+
+    navLinks.querySelectorAll("a").forEach(function(link){
+
+        link.addEventListener("click", function(){
+
+            navLinks.classList.remove("open");
+            menuBtn.textContent = "☰";
+
+        });
+
+    });
+
+}
 
 
-<!-- =======================================================
-CAMPUS GALLERY
-======================================================= -->
+/* =========================================================
+   ADMISSION MODAL
+   ========================================================= */
 
-<section class="section campus-section"
-id="campus">
+function openAdmission(){
 
-<div class="container">
+    const modal = document.getElementById("admissionModal");
 
-<div class="section-header reveal">
+    if(modal){
+        modal.classList.add("show");
+        document.body.style.overflow = "hidden";
 
-<div>
+        setTimeout(function(){
 
-...
+            const input =
+                document.getElementById("admissionName");
 
-[Message clipped]  View entire message
+            if(input){
+                input.focus();
+            }
+
+        },100);
+
+    }
+
+}
+
+function closeAdmission(){
+
+    const modal = document.getElementById("admissionModal");
+
+    if(modal){
+        modal.classList.remove("show");
+        document.body.style.overflow = "";
+    }
+
+}
+
+
+/* =========================================================
+   IMAGE MODAL
+   ========================================================= */
+
+function openImage(src, caption){
+
+    const modal = document.getElementById("imageModal");
+    const image = document.getElementById("largeImage");
+    const text = document.getElementById("imageCaption");
+
+    if(modal && image){
+
+        image.src = src;
+        image.alt = caption || "Campus image";
+
+        if(text){
+            text.textContent = caption || "";
+        }
+
+        modal.classList.add("show");
+        document.body.style.overflow = "hidden";
+
+    }
+
+}
+
+function closeImage(){
+
+    const modal = document.getElementById("imageModal");
+
+    if(modal){
+        modal.classList.remove("show");
+        document.body.style.overflow = "";
+    }
+
+}
+
+
+/* =========================================================
+   CLOSE MODALS WHEN CLICKING OUTSIDE
+   ========================================================= */
+
+document.querySelectorAll(".modal").forEach(function(modal){
+
+    modal.addEventListener("click", function(event){
+
+        if(event.target === modal){
+
+            modal.classList.remove("show");
+            document.body.style.overflow = "";
+
+        }
+
+    });
+
+});
+
+
+/* =========================================================
+   ESCAPE KEY
+   ========================================================= */
+
+document.addEventListener("keydown", function(event){
+
+    if(event.key === "Escape"){
+
+        closeAdmission();
+        closeImage();
+
+    }
+
+});
+
+
+/* =========================================================
+   FAQ
+   ========================================================= */
+
+document.querySelectorAll(".faq-question").forEach(function(question){
+
+    question.addEventListener("click", function(){
+
+        const item = question.closest(".faq-item");
+
+        if(!item) return;
+
+        const wasActive = item.classList.contains("active");
+
+        document.querySelectorAll(".faq-item").forEach(function(other){
+
+            other.classList.remove("active");
+
+        });
+
+        if(!wasActive){
+            item.classList.add("active");
+        }
+
+    });
+
+});
+
+
+/* =========================================================
+   CONTACT FORM
+   ========================================================= */
+
+const contactForm =
+    document.getElementById("contactForm");
+
+if(contactForm){
+
+    contactForm.addEventListener("submit", function(event){
+
+        event.preventDefault();
+
+        const name =
+            document.getElementById("name").value.trim();
+
+        const phone =
+            document.getElementById("phone").value.trim();
+
+        if(!name || !phone){
+
+            showToast("Please enter your name and phone number.");
+
+            return;
+
+        }
+
+        showToast(
+            "Thank you! Your enquiry has been received."
+        );
+
+        contactForm.reset();
+
+    });
+
+}
+
+
+/* =========================================================
+   ADMISSION FORM
+   ========================================================= */
+
+const admissionForm =
+    document.getElementById("admissionForm");
+
+if(admissionForm){
+
+    admissionForm.addEventListener("submit", function(event){
+
+        event.preventDefault();
+
+        const name =
+            document.getElementById("admissionName").value.trim();
+
+        const phone =
+            document.getElementById("admissionPhone").value.trim();
+
+        if(!name || !phone){
+
+            showToast(
+                "Please enter student name and phone number."
+            );
+
+            return;
+
+        }
+
+        closeAdmission();
+
+        admissionForm.reset();
+
+        showToast(
+            "Admission enquiry submitted successfully."
+        );
+
+    });
+
+}
+
+
+/* =========================================================
+   TOAST
+   ========================================================= */
+
+let toastTimer;
+
+function showToast(message){
+
+    const toast =
+        document.getElementById("toast");
+
+    if(!toast) return;
+
+    toast.textContent = message;
+    toast.classList.add("show");
+
+    clearTimeout(toastTimer);
+
+    toastTimer = setTimeout(function(){
+
+        toast.classList.remove("show");
+
+    },3000);
+
+}
+
+
+/* =========================================================
+   BACK TO TOP
+   ========================================================= */
+
+const backTop =
+    document.getElementById("backTop");
+
+window.addEventListener("scroll", function(){
+
+    if(backTop){
+
+        if(window.scrollY > 500){
+
+            backTop.classList.add("show");
+
+        }else{
+
+            backTop.classList.remove("show");
+
+        }
+
+    }
+
+});
+
+if(backTop){
+
+    backTop.addEventListener("click", function(){
+
+        window.scrollTo({
+            top:0,
+            behavior:"smooth"
+        });
+
+    });
+
+}
+
+
+/* =========================================================
+   SCROLL REVEAL
+   ========================================================= */
+
+function revealElements(){
+
+    document.querySelectorAll(".reveal").forEach(function(element){
+
+        const rect =
+            element.getBoundingClientRect();
+
+        if(rect.top < window.innerHeight - 60){
+
+            element.classList.add("visible");
+
+        }
+
+    });
+
+}
+
+window.addEventListener("scroll", revealElements);
+
+window.addEventListener("load", function(){
+
+    revealElements();
+
+});
+
+
+/* =========================================================
+   CURRENT YEAR
+   ========================================================= */
+
+const year =
+    document.getElementById("year");
+
+if(year){
+
+    year.textContent =
+        new Date().getFullYear();
+
+}
+
+
+/* =========================================================
+   PREVENT BROKEN HASH BEHAVIOUR
+   ========================================================= */
+
+document.querySelectorAll('a[href^="#"]').forEach(function(link){
+
+    link.addEventListener("click", function(event){
+
+        const targetId =
+            link.getAttribute("href");
+
+        if(
+            targetId &&
+            targetId !== "#" &&
+            document.querySelector(targetId)
+        ){
+
+            event.preventDefault();
+
+            document.querySelector(targetId)
+                .scrollIntoView({
+                    behavior:"smooth",
+                    block:"start"
+                });
+
+        }
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
