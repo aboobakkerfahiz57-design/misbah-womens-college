@@ -1,1 +1,2054 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Misbah Women's College | Mangaluru</title>
+
+<meta name="description" content="Misbah Women's College, Katipalla, Mangaluru — Empowering Women. Inspiring Futures.">
+<meta name="keywords" content="Misbah Women's College, Mangaluru, Katipalla, Women's College, Admissions, B.Com, BCA, PUC">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================================
+MISBAH WOMEN'S COLLEGE
+PREMIUM WEBSITE DEMO
+========================================================= */
+
+:root {
+--navy: #071a33;
+--navy-light: #102c4e;
+--red: #b52d35;
+--red-dark: #8f2028;
+--cream: #f7f5f0;
+--white: #ffffff;
+--black: #111827;
+--text: #243044;
+--muted: #6b778c;
+--line: #e3e7ed;
+--soft: #f3f6fa;
+--shadow: 0 20px 60px rgba(7, 26, 51, 0.12);
+--radius: 24px;
+}
+
+/* RESET */
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html {
+scroll-behavior: smooth;
+scroll-padding-top: 90px;
+}
+
+body {
+font-family: "DM Sans", sans-serif;
+background: var(--white);
+color: var(--text);
+overflow-x: hidden;
+}
+
+body.menu-open {
+overflow: hidden;
+}
+
+img {
+max-width: 100%;
+display: block;
+}
+
+a {
+color: inherit;
+text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+font: inherit;
+}
+
+button {
+cursor: pointer;
+}
+
+/* =========================================================
+PRELOADER
+========================================================= */
+
+.preloader {
+position: fixed;
+inset: 0;
+background: var(--navy);
+z-index: 9999;
+display: flex;
+align-items: center;
+justify-content: center;
+transition: opacity .6s ease, visibility .6s ease;
+}
+
+.preloader.hide {
+opacity: 0;
+visibility: hidden;
+}
+
+.loader-content {
+text-align: center;
+color: white;
+}
+
+.loader-logo {
+width: 75px;
+height: 75px;
+border-radius: 24px;
+background: var(--red);
+display: grid;
+place-items: center;
+font-family: "Playfair Display", serif;
+font-size: 36px;
+margin: auto;
+animation: pulse 1.5s infinite;
+}
+
+.loader-content p {
+margin-top: 18px;
+letter-spacing: 3px;
+text-transform: uppercase;
+font-size: 11px;
+color: #ccd7e4;
+}
+
+@keyframes pulse {
+0%,100% {
+transform: scale(1);
+}
+50% {
+transform: scale(1.08);
+}
+}
+
+/* =========================================================
+TOP BAR
+========================================================= */
+
+.topbar {
+background: var(--navy);
+color: #dbe4ef;
+min-height: 38px;
+padding: 9px 5%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 20px;
+font-size: 12px;
+}
+
+.topbar-left,
+.topbar-right {
+display: flex;
+gap: 20px;
+align-items: center;
+}
+
+/* =========================================================
+NAVIGATION
+========================================================= */
+
+.navbar {
+position: sticky;
+top: 0;
+z-index: 1000;
+background: rgba(255,255,255,.95);
+backdrop-filter: blur(18px);
+border-bottom: 1px solid rgba(7,26,51,.08);
+transition: .3s ease;
+}
+
+.navbar.scrolled {
+box-shadow: 0 8px 30px rgba(0,0,0,.08);
+}
+
+.nav-container {
+width: min(1200px, 90%);
+margin: auto;
+min-height: 82px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 25px;
+}
+
+.brand {
+display: flex;
+align-items: center;
+gap: 12px;
+}
+
+.brand-mark {
+width: 48px;
+height: 48px;
+border-radius: 15px;
+background: var(--red);
+color: white;
+display: grid;
+place-items: center;
+font-family: "Playfair Display", serif;
+font-size: 26px;
+box-shadow: 0 8px 20px rgba(181,45,53,.22);
+}
+
+.brand-text {
+font-weight: 700;
+color: var(--navy);
+line-height: 1.1;
+}
+
+.brand-text small {
+display: block;
+margin-top: 5px;
+color: var(--muted);
+font-size: 9px;
+letter-spacing: 1.4px;
+text-transform: uppercase;
+font-weight: 600;
+}
+
+.nav-links {
+display: flex;
+align-items: center;
+gap: 25px;
+font-size: 13px;
+font-weight: 600;
+}
+
+.nav-links a {
+position: relative;
+transition: .25s ease;
+}
+
+.nav-links a:not(.nav-cta)::after {
+content: "";
+position: absolute;
+left: 0;
+bottom: -8px;
+width: 0;
+height: 2px;
+background: var(--red);
+transition: .25s ease;
+}
+
+.nav-links a:hover {
+color: var(--red);
+}
+
+.nav-links a:hover::after {
+width: 100%;
+}
+
+.nav-cta {
+background: var(--red);
+color: white !important;
+padding: 12px 19px;
+border-radius: 999px;
+}
+
+.nav-cta:hover {
+background: var(--red-dark);
+transform: translateY(-2px);
+}
+
+.menu-button {
+display: none;
+border: 0;
+background: var(--navy);
+color: white;
+width: 45px;
+height: 45px;
+border-radius: 13px;
+font-size: 21px;
+}
+
+/* =========================================================
+HERO
+========================================================= */
+
+.hero {
+min-height: 790px;
+position: relative;
+overflow: hidden;
+display: flex;
+align-items: center;
+
+background:
+linear-gradient(
+90deg,
+rgba(4,18,36,.94) 0%,
+rgba(4,18,36,.82) 35%,
+rgba(4,18,36,.42) 68%,
+rgba(4,18,36,.12) 100%
+),
+url("hero-bg.jpg") center center / cover no-repeat;
+}
+
+.hero::before {
+content: "";
+position: absolute;
+width: 550px;
+height: 550px;
+right: -200px;
+top: -200px;
+border: 1px solid rgba(255,255,255,.15);
+border-radius: 50%;
+}
+
+.hero::after {
+content: "";
+position: absolute;
+inset: auto 0 0;
+height: 170px;
+background: linear-gradient(transparent, white);
+}
+
+.hero-content {
+width: min(1200px, 90%);
+margin: auto;
+position: relative;
+z-index: 2;
+padding: 90px 0;
+}
+
+.hero-tag {
+color: #f0c9cc;
+text-transform: uppercase;
+letter-spacing: 3px;
+font-weight: 700;
+font-size: 11px;
+margin-bottom: 22px;
+}
+
+.hero h1 {
+color: white;
+font-family: "Playfair Display", serif;
+font-size: clamp(50px, 7vw, 92px);
+line-height: .98;
+font-weight: 600;
+max-width: 850px;
+margin-bottom: 28px;
+}
+
+.hero h1 span {
+color: #efc6c9;
+}
+
+.hero-description {
+color: #e1e8f0;
+max-width: 650px;
+line-height: 1.8;
+font-size: 18px;
+margin-bottom: 34px;
+}
+
+.hero-buttons {
+display: flex;
+gap: 12px;
+flex-wrap: wrap;
+}
+
+.btn {
+min-height: 50px;
+padding: 14px 23px;
+border-radius: 999px;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+gap: 8px;
+font-weight: 700;
+font-size: 13px;
+border: 1px solid transparent;
+transition: .3s ease;
+}
+
+.btn-primary {
+background: var(--red);
+color: white;
+box-shadow: 0 14px 30px rgba(181,45,53,.25);
+}
+
+.btn-primary:hover {
+background: var(--red-dark);
+transform: translateY(-3px);
+}
+
+.btn-outline-light {
+border-color: rgba(255,255,255,.6);
+color: white;
+background: rgba(255,255,255,.06);
+}
+
+.btn-outline-light:hover {
+background: white;
+color: var(--navy);
+}
+
+.hero-info {
+display: flex;
+gap: 45px;
+flex-wrap: wrap;
+margin-top: 65px;
+color: #d2dce8;
+}
+
+.hero-info-item strong {
+display: block;
+color: white;
+font-size: 18px;
+margin-bottom: 4px;
+}
+
+.hero-info-item span {
+font-size: 12px;
+}
+
+/* =========================================================
+COMMON
+========================================================= */
+
+.section {
+padding: 110px 5%;
+}
+
+.container {
+width: min(1200px, 100%);
+margin: auto;
+}
+
+.section-header {
+display: flex;
+justify-content: space-between;
+align-items: end;
+gap: 35px;
+margin-bottom: 50px;
+}
+
+.kicker {
+color: var(--red);
+font-size: 11px;
+text-transform: uppercase;
+letter-spacing: 2px;
+font-weight: 800;
+margin-bottom: 10px;
+}
+
+.section-title {
+color: var(--navy);
+font-family: "Playfair Display", serif;
+font-size: clamp(38px, 5vw, 60px);
+line-height: 1.05;
+}
+
+.section-description {
+color: var(--muted);
+line-height: 1.8;
+max-width: 470px;
+}
+
+/* =========================================================
+ABOUT
+========================================================= */
+
+.about-section {
+background: var(--cream);
+}
+
+.about-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 75px;
+align-items: center;
+}
+
+.about-image {
+position: relative;
+}
+
+.about-image img {
+width: 100%;
+min-height: 520px;
+object-fit: cover;
+border-radius: 30px;
+box-shadow: var(--shadow);
+}
+
+.about-badge {
+position: absolute;
+bottom: 25px;
+left: 25px;
+background: rgba(255,255,255,.95);
+padding: 20px 24px;
+border-radius: 20px;
+box-shadow: 0 15px 35px rgba(0,0,0,.12);
+}
+
+.about-badge strong {
+color: var(--navy);
+font-family: "Playfair Display", serif;
+font-size: 30px;
+}
+
+.about-badge span {
+display: block;
+color: var(--muted);
+font-size: 11px;
+margin-top: 2px;
+}
+
+.about-content p {
+color: var(--muted);
+line-height: 1.9;
+margin-bottom: 18px;
+}
+
+.stats {
+display: grid;
+grid-template-columns: repeat(3,1fr);
+gap: 12px;
+margin-top: 30px;
+}
+
+.stat {
+background: white;
+border: 1px solid var(--line);
+border-radius: 18px;
+padding: 20px;
+}
+
+.stat strong {
+display: block;
+color: var(--navy);
+font-family: "Playfair Display", serif;
+font-size: 28px;
+}
+
+.stat span {
+color: var(--muted);
+font-size: 11px;
+}
+
+/* =========================================================
+PROGRAMS
+========================================================= */
+
+.programs-grid {
+display: grid;
+grid-template-columns: repeat(3,1fr);
+gap: 18px;
+}
+
+.program-card {
+border: 1px solid var(--line);
+border-radius: 25px;
+padding: 32px;
+background: white;
+transition: .3s ease;
+position: relative;
+overflow: hidden;
+}
+
+.program-card::after {
+content: "";
+position: absolute;
+width: 100px;
+height: 100px;
+border-radius: 50%;
+background: #f8e7e8;
+right: -45px;
+top: -45px;
+}
+
+.program-card:hover {
+transform: translateY(-7px);
+box-shadow: var(--shadow);
+border-color: #ead0d2;
+}
+
+.program-icon {
+width: 52px;
+height: 52px;
+border-radius: 16px;
+background: #f8e7e8;
+color: var(--red);
+display: grid;
+place-items: center;
+font-weight: 800;
+margin-bottom: 25px;
+position: relative;
+z-index: 2;
+}
+
+.program-card h3 {
+color: var(--navy);
+font-size: 21px;
+margin-bottom: 10px;
+}
+
+.program-card p {
+color: var(--muted);
+font-size: 14px;
+line-height: 1.7;
+}
+
+.card-link {
+color: var(--red);
+display: inline-flex;
+margin-top: 22px;
+font-size: 13px;
+font-weight: 800;
+}
+
+/* =========================================================
+WHY MISBAH
+========================================================= */
+
+.why-section {
+background: var(--navy);
+color: white;
+}
+
+.why-section .section-title {
+color: white;
+}
+
+.why-section .section-description {
+color: #bfcbd9;
+}
+
+.why-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 70px;
+align-items: center;
+}
+
+.why-quote {
+padding: 42px;
+border-radius: 30px;
+background: linear-gradient(145deg,#16375f,#0a203b);
+border: 1px solid rgba(255,255,255,.1);
+}
+
+.why-quote p {
+font-family: "Playfair Display", serif;
+font-size: 38px;
+line-height: 1.2;
+}
+
+.why-quote span {
+display: block;
+margin-top: 22px;
+color: #b8c5d4;
+font-size: 12px;
+}
+
+.features {
+margin-top: 50px;
+display: grid;
+grid-template-columns: repeat(4,1fr);
+gap: 15px;
+}
+
+.feature {
+border: 1px solid rgba(255,255,255,.11);
+background: rgba(255,255,255,.035);
+border-radius: 20px;
+padding: 23px;
+}
+
+.feature-number {
+color: #e8bfc2;
+font-size: 12px;
+font-weight: 800;
+margin-bottom: 20px;
+}
+
+.feature h4 {
+color: white;
+margin-bottom: 8px;
+}
+
+.feature p {
+color: #aebdce;
+font-size: 12px;
+line-height: 1.6;
+}
+
+/* =========================================================
+CAMPUS
+========================================================= */
+
+.campus-section {
+background: white;
+}
+
+.gallery {
+display: grid;
+grid-template-columns: 1.4fr .8fr;
+grid-template-rows: 250px 250px;
+gap: 15px;
+}
+
+.gallery-item {
+overflow: hidden;
+border-radius: 24px;
+position: relative;
+}
+
+.gallery-item.large {
+grid-row: span 2;
+}
+
+.gallery-item img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform .7s ease;
+}
+
+.gallery-item:hover img {
+transform: scale(1.06);
+}
+
+.gallery-overlay {
+position: absolute;
+inset: auto 0 0;
+padding: 25px;
+color: white;
+background: linear-gradient(transparent,rgba(0,0,0,.75));
+}
+
+.gallery-overlay strong {
+display: block;
+font-size: 18px;
+}
+
+.gallery-overlay span {
+font-size: 11px;
+}
+
+/* =========================================================
+ADMISSIONS
+========================================================= */
+
+.admission-section {
+background: var(--cream);
+}
+
+.admission-box {
+background: var(--red);
+color: white;
+border-radius: 32px;
+padding: 60px;
+display: grid;
+grid-template-columns: 1fr auto;
+gap: 40px;
+align-items: center;
+box-shadow: 0 25px 60px rgba(181,45,53,.2);
+}
+
+.admission-box .kicker {
+color: #f5d4d6;
+}
+
+.admission-box h2 {
+font-family: "Playfair Display", serif;
+font-size: clamp(38px,5vw,58px);
+margin-bottom: 14px;
+}
+
+.admission-box p {
+color: #f8dfe1;
+max-width: 680px;
+line-height: 1.8;
+}
+
+.admission-box .btn {
+background: white;
+color: var(--red);
+white-space: nowrap;
+}
+
+.admission-box .btn:hover {
+transform: translateY(-3px);
+}
+
+/* =========================================================
+FACILITIES
+========================================================= */
+
+.facilities-section {
+background: var(--soft);
+}
+
+.facilities-grid {
+display: grid;
+grid-template-columns: repeat(3,1fr);
+gap: 18px;
+}
+
+.facility {
+background: white;
+border-radius: 22px;
+padding: 30px;
+border: 1px solid var(--line);
+transition: .3s ease;
+}
+
+.facility:hover {
+transform: translateY(-5px);
+box-shadow: var(--shadow);
+}
+
+.facility-icon {
+font-size: 28px;
+margin-bottom: 20px;
+}
+
+.facility h3 {
+color: var(--navy);
+margin-bottom: 9px;
+}
+
+.facility p {
+color: var(--muted);
+line-height: 1.7;
+font-size: 13px;
+}
+
+/* =========================================================
+EVENTS
+========================================================= */
+
+.events-section {
+background: white;
+}
+
+.events-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 20px;
+}
+
+.event-card {
+overflow: hidden;
+border-radius: 25px;
+border: 1px solid var(--line);
+background: white;
+transition: .3s ease;
+}
+
+.event-card:hover {
+box-shadow: var(--shadow);
+transform: translateY(-5px);
+}
+
+.event-image {
+height: 270px;
+overflow: hidden;
+}
+
+.event-image img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.event-content {
+padding: 25px;
+}
+
+.event-label {
+color: var(--red);
+font-size: 10px;
+text-transform: uppercase;
+letter-spacing: 1.5px;
+font-weight: 800;
+}
+
+.event-content h3 {
+color: var(--navy);
+margin: 9px 0;
+font-size: 21px;
+}
+
+.event-content p {
+color: var(--muted);
+line-height: 1.7;
+font-size: 13px;
+}
+
+/* =========================================================
+FAQ
+========================================================= */
+
+.faq-section {
+background: var(--cream);
+}
+
+.faq-container {
+max-width: 900px;
+margin: auto;
+}
+
+.faq-item {
+background: white;
+border: 1px solid var(--line);
+border-radius: 18px;
+margin-bottom: 12px;
+overflow: hidden;
+}
+
+.faq-question {
+width: 100%;
+border: 0;
+background: white;
+padding: 21px 24px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+text-align: left;
+color: var(--navy);
+font-weight: 700;
+}
+
+.faq-question span {
+color: var(--red);
+font-size: 20px;
+transition: .3s;
+}
+
+.faq-answer {
+max-height: 0;
+overflow: hidden;
+transition: max-height .4s ease;
+}
+
+.faq-answer p {
+padding: 0 24px 22px;
+color: var(--muted);
+line-height: 1.7;
+font-size: 14px;
+}
+
+.faq-item.active .faq-question span {
+transform: rotate(45deg);
+}
+
+/* =========================================================
+CONTACT
+========================================================= */
+
+.contact-section {
+background: white;
+}
+
+.contact-grid {
+display: grid;
+grid-template-columns: .9fr 1.1fr;
+gap: 25px;
+}
+
+.contact-card {
+border: 1px solid var(--line);
+border-radius: 27px;
+padding: 35px;
+}
+
+.contact-item {
+display: flex;
+gap: 15px;
+padding: 18px 0;
+border-bottom: 1px solid var(--line);
+}
+
+.contact-item:last-of-type {
+border-bottom: 0;
+}
+
+.contact-icon {
+width: 43px;
+height: 43px;
+flex: 0 0 43px;
+border-radius: 13px;
+background: #f8e7e8;
+color: var(--red);
+display: grid;
+place-items: center;
+font-size: 18px;
+}
+
+.contact-item strong {
+display: block;
+color: var(--navy);
+margin-bottom: 4px;
+}
+
+.contact-item span {
+color: var(--muted);
+font-size: 13px;
+line-height: 1.6;
+}
+
+.contact-buttons {
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+margin-top: 25px;
+}
+
+.map-box {
+min-height: 100%;
+border-radius: 27px;
+background:
+linear-gradient(rgba(7,26,51,.1),rgba(7,26,51,.1)),
+repeating-linear-gradient(
+45deg,
+#e9edf2,
+#e9edf2 10px,
+#e1e6ec 10px,
+#e1e6ec 20px
+);
+display: grid;
+place-items: center;
+text-align: center;
+padding: 35px;
+}
+
+.map-pin {
+font-size: 55px;
+margin-bottom: 10px;
+}
+
+.map-box h3 {
+color: var(--navy);
+font-family: "Playfair Display", serif;
+font-size: 28px;
+}
+
+.map-box p {
+color: var(--muted);
+margin: 10px auto 20px;
+max-width: 400px;
+line-height: 1.6;
+}
+
+/* =========================================================
+ADMISSION MODAL
+========================================================= */
+
+.modal {
+position: fixed;
+inset: 0;
+z-index: 5000;
+background: rgba(4,18,36,.75);
+backdrop-filter: blur(10px);
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 20px;
+opacity: 0;
+visibility: hidden;
+transition: .3s;
+}
+
+.modal.show {
+opacity: 1;
+visibility: visible;
+}
+
+.modal-box {
+width: min(620px,100%);
+background: white;
+border-radius: 28px;
+padding: 35px;
+position: relative;
+transform: translateY(20px);
+transition: .3s;
+max-height: 90vh;
+overflow-y: auto;
+}
+
+.modal.show .modal-box {
+transform: translateY(0);
+}
+
+.close-modal {
+position: absolute;
+right: 20px;
+top: 20px;
+border: 0;
+width: 38px;
+height: 38px;
+border-radius: 50%;
+background: #f1f3f6;
+color: var(--navy);
+font-size: 20px;
+}
+
+.modal-box h2 {
+color: var(--navy);
+font-family: "Playfair Display", serif;
+font-size: 35px;
+margin-bottom: 8px;
+}
+
+.modal-box > p {
+color: var(--muted);
+font-size: 13px;
+margin-bottom: 25px;
+}
+
+.form-group {
+margin-bottom: 16px;
+}
+
+.form-group label {
+display: block;
+font-size: 12px;
+font-weight: 700;
+color: var(--navy);
+margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+width: 100%;
+border: 1px solid #dce1e8;
+border-radius: 13px;
+padding: 13px 14px;
+outline: none;
+color: var(--text);
+background: white;
+}
+
+.form-group textarea {
+min-height: 100px;
+resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+border-color: var(--red);
+box-shadow: 0 0 0 3px rgba(181,45,53,.08);
+}
+
+.form-submit {
+width: 100%;
+border: 0;
+margin-top: 5px;
+}
+
+/* =========================================================
+FOOTER
+========================================================= */
+
+footer {
+background: #06172d;
+color: #c3cfdd;
+padding: 70px 5% 25px;
+}
+
+.footer-grid {
+width: min(1200px,100%);
+margin: auto;
+display: grid;
+grid-template-columns: 1.3fr .7fr .7fr .8fr;
+gap: 40px;
+}
+
+.footer-brand {
+color: white;
+font-size: 21px;
+font-weight: 700;
+margin-bottom: 15px;
+}
+
+.footer-column p {
+color: #9eafc2;
+line-height: 1.8;
+font-size: 13px;
+max-width: 390px;
+}
+
+.footer-column h4 {
+color: white;
+margin-bottom: 18px;
+}
+
+.footer-column a {
+display: block;
+color: #aebdce;
+margin-bottom: 11px;
+font-size: 13px;
+transition: .2s;
+}
+
+.footer-column a:hover {
+color: white;
+transform: translateX(3px);
+}
+
+.footer-bottom {
+width: min(1200px,100%);
+margin: 45px auto 0;
+padding-top: 22px;
+border-top: 1px solid rgba(255,255,255,.1);
+display: flex;
+justify-content: space-between;
+gap: 20px;
+font-size: 11px;
+color: #8093aa;
+}
+
+/* =========================================================
+FLOATING WHATSAPP
+========================================================= */
+
+.whatsapp {
+position: fixed;
+right: 22px;
+bottom: 22px;
+z-index: 2000;
+width: 58px;
+height: 58px;
+border-radius: 50%;
+background: #25d366;
+color: white;
+display: grid;
+place-items: center;
+font-size: 25px;
+box-shadow: 0 12px 30px rgba(0,0,0,.2);
+transition: .3s;
+}
+
+.whatsapp:hover {
+transform: scale(1.1);
+}
+
+/* =========================================================
+BACK TO TOP
+========================================================= */
+
+.back-top {
+position: fixed;
+right: 22px;
+bottom: 92px;
+width: 42px;
+height: 42px;
+border: 0;
+border-radius: 50%;
+background: var(--navy);
+color: white;
+display: grid;
+place-items: center;
+z-index: 1500;
+opacity: 0;
+visibility: hidden;
+transition: .3s;
+}
+
+.back-top.show {
+opacity: 1;
+visibility: visible;
+}
+
+/* =========================================================
+REVEAL ANIMATION
+========================================================= */
+
+.reveal {
+opacity: 0;
+transform: translateY(30px);
+transition: opacity .8s ease, transform .8s ease;
+}
+
+.reveal.visible {
+opacity: 1;
+transform: translateY(0);
+}
+
+/* =========================================================
+RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+.nav-links {
+gap: 15px;
+}
+
+.why-grid,
+.about-grid,
+.contact-grid {
+grid-template-columns: 1fr;
+}
+
+.features {
+grid-template-columns: repeat(2,1fr);
+}
+
+.footer-grid {
+grid-template-columns: 1fr 1fr;
+}
+}
+
+@media (max-width: 800px) {
+
+.topbar {
+display: none;
+}
+
+.nav-container {
+min-height: 70px;
+}
+
+.menu-button {
+display: block;
+}
+
+.nav-links {
+position: fixed;
+top: 70px;
+left: 5%;
+right: 5%;
+background: white;
+border: 1px solid var(--line);
+border-radius: 20px;
+padding: 20px;
+display: none;
+flex-direction: column;
+align-items: stretch;
+gap: 5px;
+box-shadow: 0 25px 60px rgba(0,0,0,.14);
+}
+
+.nav-links.open {
+display: flex;
+}
+
+.nav-links a {
+padding: 14px 10px;
+}
+
+.nav-links a:not(.nav-cta)::after {
+display: none;
+}
+
+.nav-cta {
+text-align: center;
+margin-top: 5px;
+}
+
+.hero {
+min-height: 720px;
+background-position: 60% center;
+}
+
+.hero-content {
+padding: 70px 0;
+}
+
+.programs-grid,
+.facilities-grid {
+grid-template-columns: 1fr 1fr;
+}
+
+.gallery {
+grid-template-columns: 1fr;
+grid-template-rows: 300px 220px 220px;
+}
+
+.gallery-item.large {
+grid-row: auto;
+}
+
+.events-grid {
+grid-template-columns: 1fr;
+}
+
+.admission-box {
+grid-template-columns: 1fr;
+padding: 42px;
+}
+
+.footer-grid {
+grid-template-columns: 1fr 1fr;
+}
+}
+
+@media (max-width: 560px) {
+
+.section {
+padding: 75px 5%;
+}
+
+.brand-text {
+font-size: 14px;
+}
+
+.brand-text small {
+font-size: 7px;
+}
+
+.brand-mark {
+width: 42px;
+height: 42px;
+font-size: 22px;
+}
+
+.hero {
+min-height: 700px;
+}
+
+.hero h1 {
+font-size: 51px;
+}
+
+.hero-description {
+font-size: 15px;
+}
+
+.hero-info {
+gap: 22px;
+margin-top: 45px;
+}
+
+.section-header {
+display: block;
+}
+
+.section-description {
+margin-top: 16px;
+}
+
+.stats {
+grid-template-columns: 1fr;
+}
+
+.programs-grid,
+.facilities-grid,
+.features {
+grid-template-columns: 1fr;
+}
+
+.why-quote {
+padding: 30px;
+}
+
+.why-quote p {
+font-size: 31px;
+}
+
+.admission-box {
+padding: 32px;
+}
+
+.admission-box h2 {
+font-size: 40px;
+}
+
+.contact-card {
+padding: 25px;
+}
+
+.footer-grid {
+grid-template-columns: 1fr;
+}
+
+.footer-bottom {
+display: block;
+line-height: 1.8;
+}
+
+.footer-bottom span {
+display: block;
+}
+
+.whatsapp {
+right: 16px;
+bottom: 16px;
+}
+
+.back-top {
+right: 16px;
+bottom: 84px;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =======================================================
+PRELOADER
+======================================================= -->
+
+<div class="preloader" id="preloader">
+<div class="loader-content">
+<div class="loader-logo">M</div>
+<p>Misbah Women's College</p>
+</div>
+</div>
+
+
+<!-- =======================================================
+TOP BAR
+======================================================= -->
+
+<div class="topbar">
+
+<div class="topbar-left">
+<span>📍 Katipalla, Mangaluru</span>
+<span>🎓 Women's Education</span>
+</div>
+
+<div class="topbar-right">
+<span>Admissions 2026</span>
+<span>Official Website Demo</span>
+</div>
+
+</div>
+
+
+<!-- =======================================================
+NAVIGATION
+======================================================= -->
+
+<nav class="navbar" id="navbar">
+
+<div class="nav-container">
+
+<a href="#home" class="brand">
+
+<div class="brand-mark">
+M
+</div>
+
+<div class="brand-text">
+Misbah Women's College
+<small>Education • Empowerment • Excellence</small>
+</div>
+
+</a>
+
+
+<div class="nav-links" id="navLinks">
+
+<a href="#home">Home</a>
+
+<a href="#about">About</a>
+
+<a href="#programs">Programs</a>
+
+<a href="#campus">Campus</a>
+
+<a href="#facilities">Facilities</a>
+
+<a href="#events">Events</a>
+
+<a href="#contact">Contact</a>
+
+<a href="#admissions"
+class="nav-cta">
+Apply Now
+</a>
+
+</div>
+
+
+<button class="menu-button"
+id="menuButton"
+aria-label="Open menu">
+☰
+</button>
+
+</div>
+
+</nav>
+
+
+<!-- =======================================================
+HERO
+======================================================= -->
+
+<section class="hero" id="home">
+
+<div class="hero-content reveal">
+
+<div class="hero-tag">
+Misbah Women's College • Mangaluru
+</div>
+
+
+<h1>
+Empowering Women.
+<br>
+<span>Inspiring Futures.</span>
+</h1>
+
+
+<p class="hero-description">
+
+A place where education creates confidence,
+knowledge creates opportunity and every student
+is encouraged to build a meaningful future.
+
+</p>
+
+
+<div class="hero-buttons">
+
+<a href="#programs"
+class="btn btn-primary">
+Explore Programs →
+</a>
+
+<button
+class="btn btn-outline-light"
+onclick="openAdmission()">
+Admission Enquiry
+</button>
+
+</div>
+
+
+<div class="hero-info">
+
+<div class="hero-info-item">
+<strong>Since 2016</strong>
+<span>Institutional journey</span>
+</div>
+
+<div class="hero-info-item">
+<strong>PU + Degree</strong>
+<span>Academic pathways</span>
+</div>
+
+<div class="hero-info-item">
+<strong>Katipalla</strong>
+<span>Mangaluru, Karnataka</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =======================================================
+ABOUT
+======================================================= -->
+
+<section class="section about-section"
+id="about">
+
+<div class="container">
+
+<div class="about-grid">
+
+<div class="about-image reveal">
+
+<img src="hero-bg.jpg"
+alt="Misbah Women's College Campus">
+
+<div class="about-badge">
+
+<strong>2016</strong>
+
+<span>
+Established
+</span>
+
+</div>
+
+</div>
+
+
+<div class="about-content reveal">
+
+<div class="kicker">
+About Misbah
+</div>
+
+<h2 class="section-title">
+A place to learn,
+grow and lead.
+</h2>
+
+<br>
+
+<p>
+Misbah Women's College is an educational
+institution located in Katipalla, Mangaluru,
+focused on creating meaningful academic
+opportunities for women.
+</p>
+
+<p>
+The institution was founded in 2016 by the
+Misbah Knowledge Foundation and is associated
+with Mangalore University.
+</p>
+
+<p>
+This official website concept brings the
+college's academic programs, campus life,
+admissions and institutional information
+together in one modern digital experience.
+</p>
+
+<div class="stats">
+
+<div class="stat">
+<strong>2016</strong>
+<span>Established</span>
+</div>
+
+<div class="stat">
+<strong>PU</strong>
+<span>Academic pathway</span>
+</div>
+
+<div class="stat">
+<strong>UG</strong>
+<span>Degree pathway</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =======================================================
+PROGRAMS
+======================================================= -->
+
+<section class="section"
+id="programs">
+
+<div class="container">
+
+<div class="section-header reveal">
+
+<div>
+
+<div class="kicker">
+Academic Pathways
+</div>
+
+<h2 class="section-title">
+Explore our programs.
+</h2>
+
+</div>
+
+<p class="section-description">
+
+Discover academic pathways designed to
+support students in their next stage of
+education and career.
+
+</p>
+
+</div>
+
+
+<div class="programs-grid">
+
+
+<article class="program-card reveal">
+
+<div class="program-icon">
+PU
+</div>
+
+<h3>
+PU College
+</h3>
+
+<p>
+Present PUC streams, subjects,
+eligibility and admission information
+in a clear student-friendly format.
+</p>
+
+<a href="#admissions"
+class="card-link">
+Enquire about admission →
+</a>
+
+</article>
+
+
+<article class="program-card reveal">
+
+<div class="program-icon">
+BC
+</div>
+
+<h3>
+B.Com
+</h3>
+
+<p>
+A dedicated program experience for
+commerce students with course and
+admission information.
+</p>
+
+<a href="#admissions"
+class="card-link">
+Enquire about B.Com →
+</a>
+
+</article>
+
+
+<article class="program-card reveal">
+
+<div class="program-icon">
+CA
+</div>
+
+<h3>
+BCA
+</h3>
+
+<p>
+A technology-focused academic pathway
+presented with clear information for
+students and parents.
+</p>
+
+<a href="#admissions"
+class="card-link">
+Enquire about BCA →
+</a>
+
+</article>
+
+
+<article class="program-card reveal">
+
+<div class="program-icon">
+AI
+</div>
+
+<h3>
+Artificial Intelligence
+</h3>
+
+<p>
+A modern digital section for emerging
+technology-focused programs where
+officially offered.
+</p>
+
+<a href="#admissions"
+class="card-link">
+Explore →
+</a>
+
+</article>
+
+
+<article class="program-card reveal">
+
+<div class="program-icon">
+CS
+</div>
+
+<h3>
+Cyber Security
+</h3>
+
+<p>
+Showcase future-ready technology
+learning opportunities and career
+pathways.
+</p>
+
+<a href="#admissions"
+class="card-link">
+Explore →
+</a>
+
+</article>
+
+
+<article class="program-card reveal">
+
+<div class="program-icon">
++
+</div>
+
+<h3>
+More Programs
+</h3>
+
+<p>
+Additional approved programs can be
+added with dedicated course pages,
+eligibility and admission details.
+</p>
+
+<a href="#contact"
+class="card-link">
+Ask the college →
+</a>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =======================================================
+WHY MISBAH
+======================================================= -->
+
+<section class="section why-section"
+id="why">
+
+<div class="container">
+
+<div class="why-grid">
+
+<div class="reveal">
+
+<div class="kicker">
+Why Misbah
+</div>
+
+<h2 class="section-title">
+More than a website.
+<br>
+A digital front door.
+</h2>
+
+<br>
+
+<p class="section-description">
+
+The premium experience is designed
+around what students and parents need:
+discover the institution, understand
+programs, experience the campus and
+make an admission enquiry.
+
+</p>
+
+</div>
+
+
+<div class="why-quote reveal">
+
+<p>
+“Your future deserves
+a place that believes
+in it.”
+</p>
+
+<span>
+Misbah Women's College —
+Premium website concept
+</span>
+
+</div>
+
+</div>
+
+
+<div class="features">
+
+<div class="feature reveal">
+<div class="feature-number">01</div>
+<h4>Student First</h4>
+<p>
+Simple navigation that makes important
+information easy to find.
+</p>
+</div>
+
+<div class="feature reveal">
+<div class="feature-number">02</div>
+<h4>Strong Identity</h4>
+<p>
+A visual experience built around the
+college's own campus and story.
+</p>
+</div>
+
+<div class="feature reveal">
+<div class="feature-number">03</div>
+<h4>Admission Focused</h4>
+<p>
+Clear admission actions throughout
+the website.
+</p>
+</div>
+
+<div class="feature reveal">
+<div class="feature-number">04</div>
+<h4>Future Ready</h4>
+<p>
+The structure can grow with programs,
+events and announcements.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =======================================================
+CAMPUS GALLERY
+======================================================= -->
+
+<section class="section campus-section"
+id="campus">
+
+<div class="container">
+
+<div class="section-header reveal">
+
+<div>
+
+...
+
+[Message clipped]  View entire message
